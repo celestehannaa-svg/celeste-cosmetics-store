@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f2ed">
+<meta name="description" content="Discover Celesté Cosmetics — beauty essentials made to make every look yours.">
+<title>Celesté Cosmetics | Beauty, your way</title>
+<style>
+:root{--ink:#302824;--muted:#887b73;--cream:#faf6f1;--blush:#f0ded9;--rose:#b77f79;--line:#e9dfd8;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.announcement{background:#3b302d;color:#fff;text-align:center;padding:10px;font-size:11px;letter-spacing:2px}.header{position:sticky;top:0;z-index:5;background:#faf6f1ee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{max-width:1200px;margin:auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-family:Georgia,serif;font-size:27px;letter-spacing:3px;text-decoration:none;color:var(--ink)}.brand small{display:block;text-align:center;font:9px Arial;letter-spacing:4px;margin-top:3px}.navlinks{display:flex;gap:25px}.navlinks a{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:var(--ink)}.cartbtn,.menu-btn{border:1px solid var(--line);background:transparent;padding:11px 14px;font-size:11px;letter-spacing:1px}.hero{max-width:1200px;margin:24px auto 60px;padding:0 24px}.hero-inner{min-height:490px;background:linear-gradient(110deg,#eadbd4 0%,#f4e9e3 48%,#e8d6ce 100%);display:grid;grid-template-columns:1.05fr .95fr;overflow:hidden}.hero-copy{padding:75px 7vw;align-self:center}.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#876d65}.hero h1{font:normal clamp(42px,6vw,76px)/1.05 Georgia,serif;margin:20px 0}.hero p{color:#6e6059;line-height:1.8;max-width:390px;font-size:14px}.primary{display:inline-block;background:#382e2a;color:white;border:0;padding:16px 25px;margin-top:18px;text-decoration:none;font-size:10px;letter-spacing:2px;text-transform:uppercase}.hero-art{display:flex;align-items:center;justify-content:center;padding:35px;background:radial-gradient(ellipse at center,#f9f1ed 0%,#e8d5cc 70%)}.hero-art img{width:100%;height:410px;object-fit:cover;mix-blend-mode:multiply}.section{max-width:1200px;margin:0 auto 70px;padding:0 24px}.section-head{text-align:center;margin-bottom:30px}.section-head .eyebrow{color:var(--rose)}h2{font:normal 36px Georgia,serif;margin:10px 0}.section-head p{color:var(--muted);font-size:13px}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.cat{background:#eee1db;padding:28px 15px;text-align:center;border:0;color:var(--ink);font:22px Georgia,serif;min-height:110px}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:15px;margin:30px 0 20px}.toolbar input,.toolbar select{background:#fff;border:1px solid var(--line);padding:12px;color:var(--ink)}.toolbar input{width:min(280px,55%)}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}.product{background:#fff;border:1px solid var(--line);position:relative}.photo{height:260px;background:linear-gradient(145deg,#f4e9e4,#e8d8d1);display:flex;align-items:center;justify-content:center;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover}.placeholder{font:italic 24px Georgia,serif;color:#a58c82;text-align:center;padding:20px}.product-info{padding:16px}.product-info small{color:var(--rose);font-size:9px;letter-spacing:2px;text-transform:uppercase}.product-info h3{font:normal 20px Georgia,serif;margin:8px 0}.product-info p{font-size:12px;color:var(--muted);min-height:30px}.product-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:15px}.price{font-size:13px}.add{border:1px solid #3b302d;background:#3b302d;color:white;padding:10px 12px;font-size:10px;letter-spacing:1px}.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:50px}.about{background:#eee1db;padding:60px 24px;text-align:center}.about p{max-width:650px;margin:15px auto;color:#71635c;line-height:1.9;font-size:14px}.footer{padding:40px 24px;text-align:center;background:#382e2a;color:#fff}.footer .brand{color:white}.footer p{font-size:11px;color:#d6c9c2;letter-spacing:1px}.drawer-bg{position:fixed;inset:0;background:#0006;z-index:10;display:none}.drawer{position:absolute;right:0;top:0;height:100%;width:min(440px,100%);background:var(--cream);padding:25px;overflow:auto}.drawer-bg.open{display:block}.drawer-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:15px}.drawer-head h2{font-size:28px}.close{border:0;background:transparent;font-size:25px}.cart-item{display:flex;justify-content:space-between;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}.cart-item strong{font:18px Georgia,serif}.qty{display:flex;align-items:center;gap:8px;margin-top:8px}.qty button{border:1px solid var(--line);background:white;padding:3px 9px}.cart-total{display:flex;justify-content:space-between;padding:20px 0;font-size:15px}.field{width:100%;padding:13px;border:1px solid var(--line);background:white;margin:7px 0 12px}.checkout{width:100%;padding:16px;background:#287b52;color:white;border:0;letter-spacing:1px;font-size:11px}.note{font-size:11px;line-height:1.6;color:var(--muted)}.hide{display:none!important}
+@media(max-width:760px){.nav{padding:14px 16px}.navlinks{display:none}.brand{font-size:22px}.hero{margin:14px auto 40px;padding:0 14px}.hero-inner{grid-template-columns:1fr}.hero-copy{padding:45px 30px 20px}.hero-art{padding:10px 35px 30px}.hero-art img{height:250px}.section{padding:0 14px;margin-bottom:50px}.categories{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:repeat(2,1fr);gap:10px}.photo{height:190px}.product-info{padding:12px}.product-info h3{font-size:17px}.toolbar{flex-wrap:wrap}.toolbar input{width:100%}.section-head h2{font-size:30px}}
+</style>
+</head>
+<body>
+<div class="announcement">A LITTLE BEAUTY, A LOT OF YOU · FREE SHIPPING DETAILS ON WHATSAPP</div>
+<header class="header"><nav class="nav">
+<a class="brand" href="#">CELESTÉ<small>COSMETICS</small></a>
+<div class="navlinks"><a href="#shop">Shop</a><a href="#categories">Collections</a><a href="#about">Our story</a></div>
+<button class="cartbtn" onclick="openCart()">BAG (<span id="cart-count">0</span>)</button>
+</nav></header>
+<main>
+<section class="hero"><div class="hero-inner">
+<div class="hero-copy"><div class="eyebrow">Beauty, your way</div><h1>Make every<br>look yours.</h1><p>Discover your next beauty essential. Thoughtfully selected shades, playful details and everyday favourites from Celesté Cosmetics.</p><a class="primary" href="#shop">Explore the collection</a></div>
+<div class="hero-art"><div class="placeholder">Your beauty.<br>Your moment.<br><span style="font-size:13px;letter-spacing:3px">CELESTÉ COSMETICS</span></div></div>
+</div></section>
+<section class="section" id="categories"><div class="section-head"><div class="eyebrow">Find your favourite</div><h2>Shop by collection</h2><p>A little something for every part of your look.</p></div>
+<div class="categories"><button class="cat" onclick="filterCategory('Eyeliners')">Eyeliners</button><button class="cat" onclick="filterCategory('Lip Glosses')">Lip Glosses</button><button class="cat" onclick="filterCategory('Lip Mattes')">Lip Mattes</button><button class="cat" onclick="filterCategory('Concealers')">Concealers</button><button class="cat" onclick="filterCategory('Mascara')">Mascara</button><button class="cat" onclick="filterCategory('All')">Shop All</button></div></section>
+<section class="section" id="shop"><div class="section-head"><div class="eyebrow">The Celesté edit</div><h2>Our collection</h2><p>Choose your favourites and send your order directly to us.</p></div>
+<div class="toolbar"><input id="search" placeholder="Search products…" oninput="renderProducts()"><select id="category" onchange="renderProducts()"><option>All</option><option>Eyeliners</option><option>Lip Glosses</option><option>Lip Mattes</option><option>Concealers</option><option>Mascara</option></select></div>
+<div class="products" id="products"></div></section>
+<section class="about" id="about"><div class="eyebrow">A note from us</div><h2>The Celesté Cosmetics family</h2><p>Beauty should feel personal, joyful and effortless. Thank you for being part of our little world and for choosing Celesté Cosmetics.</p><a class="primary" href="https://wa.me/96170005510" target="_blank" rel="noopener">Talk to us</a></section>
+</main>
+<footer class="footer"><a class="brand" href="#">CELESTÉ<small>COSMETICS</small></a><p>BEAUTY, YOUR WAY · LEBANON</p><p>© <span id="year"></span> Celesté Cosmetics</p></footer>
+<div class="drawer-bg" id="drawer-bg" onclick="if(event.target===this)closeCart()"><aside class="drawer"><div class="drawer-head"><h2>Your bag</h2><button class="close" onclick="closeCart()">×</button></div><div id="cart-items"></div><div class="cart-total"><span>Subtotal</span><strong id="cart-total">$0.00</strong></div><p class="note">Delivery fees and final availability will be confirmed with you on WhatsApp. Your order is not confirmed until our team replies.</p><label class="note">Your name</label><input class="field" id="customer-name" placeholder="Name"><label class="note">Delivery area / address</label><input class="field" id="customer-address" placeholder="Town and delivery details"><label class="note">Extra notes (optional)</label><input class="field" id="customer-notes" placeholder="Shade, delivery notes…"><button class="checkout" onclick="sendWhatsApp()">ORDER VIA WHATSAPP</button></aside></div>
+<script src="products.js"></script>
+<script>
+let cart={};
+const money=n=>'$'+Number(n).toFixed(2);
+function renderProducts(){
+ const q=(document.getElementById('search')?.value||'').toLowerCase(), c=document.getElementById('category')?.value||'All';
+ const items=PRODUCTS.filter(p=>(c==='All'||p.category===c)&&(`${p.name} ${p.category} ${p.description}`.toLowerCase().includes(q)));
+ document.getElementById('products').innerHTML=items.length?items.map(p=>`<article class="product"><div class="photo">${p.image?`<img src="${p.image}" alt="${p.name}">`:`<div class="placeholder">CELESTÉ<br><small>${p.category}</small></div>`}</div><div class="product-info"><small>${p.category}</small><h3>${p.name}</h3><p>${p.description||'A Celesté Cosmetics favourite.'}</p><div class="product-bottom"><span class="price">${p.price>0?money(p.price):'Price on request'}</span><button class="add" onclick="addToCart('${p.id}')">ADD +</button></div></div></article>`).join(''):'<div class="empty">No products found. Try another search.</div>';
+}
+function filterCategory(c){document.getElementById('category').value=c;document.getElementById('shop').scrollIntoView({behavior:'smooth'});renderProducts()}
+function addToCart(id){cart[id]=(cart[id]||0)+1;updateCart();openCart()}
+function updateCart(){
+ const count=Object.values(cart).reduce((a,b)=>a+b,0);document.getElementById('cart-count').textContent=count;
+ const entries=Object.entries(cart).filter(([id,q])=>q>0);
+ document.getElementById('cart-items').innerHTML=entries.length?entries.map(([id,q])=>{const p=PRODUCTS.find(x=>x.id===id);return `<div class="cart-item"><div><strong>${p.name}</strong><div class="note">${p.price>0?money(p.price):'Price to confirm'}</div><div class="qty"><button onclick="changeQty('${id}',-1)">−</button>${q}<button onclick="changeQty('${id}',1)">+</button></div></div><strong>${p.price>0?money(p.price*q):'—'}</strong></div>`}).join(''):'<p class="note">Your bag is empty. Add a few favourites to get started.</p>';
+ const total=entries.reduce((s,[id,q])=>s+(PRODUCTS.find(p=>p.id===id).price||0)*q,0);document.getElementById('cart-total').textContent=money(total);
+}
+function changeQty(id,n){cart[id]=(cart[id]||0)+n;if(cart[id]<=0)delete cart[id];updateCart()}
+function openCart(){document.getElementById('drawer-bg').classList.add('open')}
+function closeCart(){document.getElementById('drawer-bg').classList.remove('open')}
+function sendWhatsApp(){
+ const entries=Object.entries(cart).filter(([id,q])=>q>0);if(!entries.length){alert('Your bag is empty.');return}
+ const name=document.getElementById('customer-name').value.trim(),address=document.getElementById('customer-address').value.trim(),notes=document.getElementById('customer-notes').value.trim();
+ if(!name||!address){alert('Please add your name and delivery area.');return}
+ let total=0;let lines=entries.map(([id,q])=>{const p=PRODUCTS.find(x=>x.id===id);total+=(p.price||0)*q;return `• ${p.name} x ${q} — ${p.price>0?money(p.price*q):'price to confirm'}`});
+ const msg=`Hello Celesté Cosmetics! I'd like to place an order:\n\n${lines.join('\n')}\n\nSubtotal: ${money(total)}\nName: ${name}\nDelivery area: ${address}\nNotes: ${notes||'None'}\n\nPlease confirm availability, delivery fee and final total.`;
+ window.open('https://wa.me/96170005510?text='+encodeURIComponent(msg),'_blank','noopener');
+}
+document.getElementById('year').textContent=new Date().getFullYear();renderProducts();updateCart();
+</script>
+</body></html>
