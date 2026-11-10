@@ -1,6 +1,6 @@
 const PRODUCTS = [
 // --- EYELINERS ---
-{id:"blackout-babe", name:"Blackout Babe", category:"Eyeliners", price:6, description:"Intense black waterproof eyeliner", image:"images/Blackout 1.png", gallery:["images/Blackout 1.jpg","images/Blackout 2.jpg"]},
+{id:"blackout-babe", name:"Blackout Babe", category:"Eyeliners", price:6, description:"Intense black waterproof eyeliner", image:"images/Blackout 1.PNG", gallery:["images/Blackout 1.jpg","images/Blackout 2.jpg"]},
 {id:"shock-me-blue", name:"Shock Me Blue", category:"Eyeliners", price:6, description:"Electric blue waterproof eyeliner", image:"images/Shock 1.jpg", gallery:["images/Shock 1.jpg","images/Shock 2.jpg"]},
 {id:"tangerine-pop", name:"Tangerine Pop", category:"Eyeliners", price:6, description:"Bright orange waterproof eyeliner", image:"images/Tangerine 1.jpg", gallery:["images/Tangerine 1.jpg","images/Tangerine 2.jpg"]},
 {id:"leaf-me-alone", name:"Leaf Me Alone", category:"Eyeliners", price:6, description:"Green waterproof eyeliner", image:"images/Leaf 1.jpg", gallery:["images/Leaf 1.jpg","images/Leaf 2.jpg"]},
