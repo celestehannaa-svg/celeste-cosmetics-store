@@ -41,14 +41,20 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 .cart-item img{width:56px;height:56px;object-fit:cover;border-radius:10px;background:#f1e8e2}.qty{display:flex;gap:8px;align-items:center}.qty button{width:26px;height:26px;border-radius:50%;border:1px solid #ddd;background:#fff;cursor:pointer}
 .drawer-foot{padding:16px;border-top:1px solid #eee;display:flex;flex-direction:column;gap:8px}.drawer-foot input{padding:11px;border:1px solid #ddd;border-radius:10px;width:100%}
 .wa{background:#25D366;color:#fff;border:0;padding:13px;border-radius:999px;font-weight:800;cursor:pointer}
+.snow{position:fixed;top:-10px;z-index:99;pointer-events:none;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
 </style>
 </head>
 <body>
-<div class="topbar">Welcome to our store</div>
-<div class="topbar2">Get a FREE Cosmetic Bag for all orders above 35$ • Delivery Across Lebanon</div>
+<div id="snow"></div>
+<script>
+let snowBox=document.getElementById('snow');
+for(let i=0;i<30;i++){let s=document.createElement('div');s.className='snow';s.textContent=['❄️','✨','🎄'][Math.floor(Math.random()*3)];s.style.left=Math.random()*100+'vw';s.style.fontSize=(12+Math.random()*18)+'px';s.style.animationDuration=(4+Math.random()*5)+'s';s.style.animationDelay=(Math.random()*5)+'s';s.style.opacity=0.8;snowBox.appendChild(s);}
+</script>
+<div class="topbar" style="background:#0b3d2e;color:#fff">🎄 Merry Christmas • Welcome to our store 🎄</div>
+<div class="topbar2" style="background:#c1121f;color:#fff;border:0">🎁 Get a FREE Cosmetic Bag for all orders above 35$ • Perfect Christmas Gift • Delivery Across Lebanon 🎁</div>
 <header class="header"><nav class="nav"><button onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})" style="font-size:24px;background:none;border:0;cursor:pointer">☰</button><a href="#" class="logo">CELEST<span style="font-style:italic">É</span><small>Cosmetics | Professional Brand</small></a><div style="display:flex;gap:16px;align-items:center"><span onclick="document.getElementById('search').focus();document.getElementById('shop').scrollIntoView({behavior:'smooth'})" style="font-size:22px;cursor:pointer">🔍</span><button class="cartbtn" onclick="openCart()">🛍️ (<span id="cart-count">0</span>)</button></div></nav></header>
 <main>
-<!-- RANDOM SLIDER - 3 DIFFERENT PRODUCTS EVERY VISIT -->
 <section style="max-width:1100px;margin:0 auto;position:relative;overflow:hidden;background:#fff">
   <div id="slider" style="display:flex;transition:transform .5s ease"></div>
   <div style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2">
@@ -59,9 +65,8 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
   <button onclick="prevSlide()" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.9);border:0;width:38px;height:38px;border-radius:50%;font-size:18px;cursor:pointer;z-index:2">‹</button>
   <button onclick="nextSlide()" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.9);border:0;width:38px;height:38px;border-radius:50%;font-size:18px;cursor:pointer;z-index:2">›</button>
 </section>
-
 <section class="section" id="categories">
-  <div class="banner"><div><b>🔥 Best Sellers This Week</b><br><span>Blackout Babe • Bomb • Mermaid Glow • Concealer</span></div><button class="cartbtn" style="background:#fff;color:#111" onclick="filterCategory('Eyeliners')">Shop Bestsellers →</button></div>
+  <div class="banner" style="background:linear-gradient(90deg,#0b3d2e,#c1121f,#d4a017)"><div><b>🎄 Christmas Gift Edit 🎄</b><br><span>Best Gifts: Blackout Babe • Bomb • Mermaid Glow • Concealer — Give Beauty This Christmas</span></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="cartbtn" style="background:#fff;color:#111" onclick="filterCategory('Highlighters')">🎄 Shop Christmas Gifts →</button><button class="cartbtn" style="background:#d4a017;color:#111" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">🎁 Gift Sets Under $20</button></div></div>
   <div class="toolbar" id="cats"></div>
 </section>
 <section class="section" id="shop"><div style="font-size:12px;letter-spacing:.22em;color:#b6777f;font-weight:700">THE CELESTÉ EDIT</div><h2>A little something for every look</h2><div class="toolbar"><input id="search" placeholder="Search products..." oninput="render()"><select id="catSelect" onchange="render()"><option value="All">All categories</option></select></div><div class="products" id="grid"></div></section>
@@ -69,7 +74,15 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 </main>
 <footer class="footer"><div><b>© 2026 Celesté Cosmetics</b><br><span style="color:#888">Beauty, your way.</span></div><div>WhatsApp: +961 70 005 510<br>Instagram: @celeste.cosmetics</div></footer>
 <div class="drawer-bg" id="bg" onclick="closeCart()"></div>
-<aside class="drawer" id="drawer"><div class="drawer-head"><b>Your Bag</b><button onclick="closeCart()">✕</button></div><div class="drawer-body" id="cart-items"></div><div class="drawer-foot"><div style="display:flex;justify-content:space-between"><span>Total</span><b id="cart-total">$0.00</b></div><div style="font-size:12px;color:#888">Delivery calculated on 【entity-WhatsApp¦canonical_name=WhatsApp】 • FREE Cosmetic Bag for orders above 35$</div><input id="cust-name" placeholder="Your name"><input id="cust-area" placeholder="Your area / city"><button class="wa" onclick="checkout()">Order on WhatsApp →</button></div></aside>
+<aside class="drawer" id="drawer"><div class="drawer-head"><b>Your Bag</b><button onclick="closeCart()">✕</button></div><div class="drawer-body" id="cart-items"></div>
+<div class="drawer-foot">
+<div style="display:flex;justify-content:space-between"><span>Total</span><b id="cart-total">$0.00</b></div>
+
+<!-- ONLY CHRISTMAS PACKAGING - NO OPTIONS -->
+<label style="display:flex;gap:10px;align-items:center;background:#fff8e6;border:1px solid #d4a017;padding:12px;border-radius:12px;cursor:pointer;font-size:14px"><input type="checkbox" id="xmas-pack" onchange="updateCart()" style="width:20px;height:20px;accent-color:#c1121f"> 🎄 Add Christmas Gift Packaging <b>+$2.00</b><span style="font-size:11px;color:#888">Wrapped + Ribbon + Card</span></label>
+
+<div style="font-size:12px;color:#888">Delivery calculated on WhatsApp • FREE Cosmetic Bag for orders above 35$</div>
+<input id="cust-name" placeholder="Your name"><input id="cust-area" placeholder="Your area / city"><button class="wa" onclick="checkout()">Order on WhatsApp →</button></div></aside>
 <script src="products.js"></script>
 <script>
 let curSlide=0;
@@ -110,10 +123,10 @@ function render(){
 }
 function addToCart(id){const p=PRODUCTS.find(x=>x.id===id);let varVal="";const sel=document.getElementById("var-"+id);if(sel)varVal=sel.value;let key=id+"|"+varVal;let ex=cart.find(x=>x.key===key);if(ex)ex.qty++;else cart.push({key,id,qty:1,variant:varVal});saveCart();openCart()}
 function saveCart(){localStorage.setItem("celeste_cart",JSON.stringify(cart));updateCart()}
-function updateCart(){document.getElementById("cart-count").textContent=cart.reduce((a,c)=>a+c.qty,0);const box=document.getElementById("cart-items");let total=0;if(!cart.length)box.innerHTML="<p>Your bag is empty.</p>";else box.innerHTML=cart.map((it,idx)=>{const p=PRODUCTS.find(x=>x.id===it.id);total+=p.price*it.qty;return '<div class="cart-item"><img src="'+p.image+'"><div style="flex:1"><b>'+p.name+'</b><br><span style="font-size:12px;color:#888">'+(it.variant?"Shade "+it.variant+" • ":"")+'$'+p.price.toFixed(2)+'</span><div class="qty"><button onclick="changeQty('+idx+',-1)">-</button><span>'+it.qty+'</span><button onclick="changeQty('+idx+',1)">+</button></div></div><button onclick="removeItem('+idx+')" style="border:0;background:none;cursor:pointer">✕</button></div>'}).join("");document.getElementById("cart-total").textContent="$"+total.toFixed(2)}
+function updateCart(){document.getElementById("cart-count").textContent=cart.reduce((a,c)=>a+c.qty,0);const box=document.getElementById("cart-items");let total=0;let xmas=document.getElementById("xmas-pack")&&document.getElementById("xmas-pack").checked?2:0;if(!cart.length)box.innerHTML="<p>Your bag is empty.</p>";else box.innerHTML=cart.map((it,idx)=>{const p=PRODUCTS.find(x=>x.id===it.id);total+=p.price*it.qty;return '<div class="cart-item"><img src="'+p.image+'"><div style="flex:1"><b>'+p.name+'</b><br><span style="font-size:12px;color:#888">'+(it.variant?"Shade "+it.variant+" • ":"")+'$'+p.price.toFixed(2)+'</span><div class="qty"><button onclick="changeQty('+idx+',-1)">-</button><span>'+it.qty+'</span><button onclick="changeQty('+idx+',1)">+</button></div></div><button onclick="removeItem('+idx+')" style="border:0;background:none;cursor:pointer">✕</button></div>'}).join("");document.getElementById("cart-total").textContent="$"+(total+xmas).toFixed(2)}
 function changeQty(i,d){cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);saveCart()}function removeItem(i){cart.splice(i,1);saveCart()}
 function openCart(){document.getElementById("drawer").classList.add("open");document.getElementById("bg").classList.add("open");updateCart()}function closeCart(){document.getElementById("drawer").classList.remove("open");document.getElementById("bg").classList.remove("open")}
-function checkout(){let total=cart.reduce((a,c)=>a+PRODUCTS.find(x=>x.id===c.id).price*c.qty,0);let msg="Hi Celesté! I want to order:%0A%0A"+cart.map(c=>{const p=PRODUCTS.find(x=>x.id===c.id);return "- "+p.name+(c.variant?" - Shade "+c.variant:"")+" x"+c.qty+" - $"+(p.price*c.qty).toFixed(2)}).join("%0A")+"%0A%0ATotal: $"+total.toFixed(2)+"%0AName: "+encodeURIComponent(document.getElementById("cust-name").value)+"%0AArea: "+encodeURIComponent(document.getElementById("cust-area").value);window.open("https://wa.me/96170005510?text="+msg,"_blank")}
+function checkout(){let total=cart.reduce((a,c)=>a+PRODUCTS.find(x=>x.id===c.id).price*c.qty,0);let xmas=document.getElementById("xmas-pack")&&document.getElementById("xmas-pack").checked?2:0;total+=xmas;let msg="Hi Celesté! I want to order:%0A%0A"+cart.map(c=>{const p=PRODUCTS.find(x=>x.id===c.id);return "- "+p.name+(c.variant?" - Shade "+c.variant:"")+" x"+c.qty+" - $"+(p.price*c.qty).toFixed(2)}).join("%0A")+(xmas?"%0A🎄 Christmas Gift Packaging: $2.00":"")+"%0A%0ATotal: $"+total.toFixed(2)+"%0AName: "+encodeURIComponent(document.getElementById("cust-name").value)+"%0AArea: "+encodeURIComponent(document.getElementById("cust-area").value);window.open("https://wa.me/96170005510?text="+msg,"_blank")}
 render();updateCart();buildRandomSlider();
 </script>
 </body>
