@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>C&#69;LEST&Eacute; COSMETICS | Beauty, your way</title>
-<meta name="description" content="Discover C&#69;LEST&Eacute; Cosmetics - beauty essentials made to make every look yours.">
+<title>BRAND COSMETICS | Beauty, your way</title>
+<meta name="description" content="Discover beauty essentials made to make every look yours.">
 <style>
 :root{--ink:#382824;--cream:#faf6f1;--blush:#f8ded9;--rose:#b6777f;--line:#e9dfd8;--white:#fff}
 *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Helvetica,Arial,sans-serif}
@@ -46,14 +46,14 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 </head>
 <body>
 <div class="announcement">A LITTLE BEAUTY, A LOT OF YOU • FREE SHIPPING DETAILS ON WHATSAPP</div>
-<header class="header"><nav class="nav"><a href="#" class="brand">C&#69;LEST&Eacute;<small>COSMETICS</small></a><div class="nav-links"><a href="#shop">Shop</a><a href="#categories">Collections</a><a href="#about">Our story</a></div><button class="cartbtn" onclick="openCart()">BAG (<span id="cart-count">0</span>)</button></nav></header>
+<header class="header"><nav class="nav"><a href="#" class="brand"><span id="logo-top"></span><small>COSMETICS</small></a><div class="nav-links"><a href="#shop">Shop</a><a href="#categories">Collections</a><a href="#about">Our story</a></div><button class="cartbtn" onclick="openCart()">BAG (<span id="cart-count">0</span>)</button></nav></header>
 <main>
-<section class="hero"><div><div class="hero-copy">BEAUTY, YOUR WAY</div><h1>Make every<br>look yours.</h1><p>Discover your next beauty essential. Thoughtfully selected shades, made for every day in Lebanon.</p><button class="cartbtn" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Shop Collection ↓</button></div><div class="hero-art">C&#69;LEST&Eacute;<br>COSMETICS</div></section>
-<section class="section" id="categories"><div class="eyebrow">C&#69;LEST&Eacute; COSMETICS</div><h2>Shop by collection</h2><div class="toolbar" id="cats"></div></section>
-<section class="section" id="shop"><div class="eyebrow">THE C&#69;LEST&Eacute; EDIT</div><h2>A little something for every look</h2><div class="toolbar"><input id="search" placeholder="Search products..." oninput="renderProducts()"><select id="category" onchange="renderProducts()"><option value="All">All categories</option><option>Eyeliners</option><option>Lip Gloss</option><option>Lip Matte</option><option>Concealers</option><option>Mascara</option><option>Tools</option><option>Highlighters</option></select></div><div class="products" id="products"></div></section>
-<section class="section about" id="about"><div class="eyebrow">A NOTE FROM US</div><h2>The C&#101;lest&eacute; Cosmetics family</h2><p>Beauty should feel personal, joyful and effortless. Thank you for supporting a Lebanese brand.</p></section>
+<section class="hero"><div><div class="hero-copy">BEAUTY, YOUR WAY</div><h1>Make every<br>look yours.</h1><p>Discover your next beauty essential. Thoughtfully selected shades, made for every day in Lebanon.</p><button class="cartbtn" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Shop Collection ↓</button></div><div class="hero-art"><span id="hero-brand"></span><br>COSMETICS</div></section>
+<section class="section" id="categories"><div class="eyebrow"><span class="brand-upper"></span> COSMETICS</div><h2>Shop by collection</h2><div class="toolbar" id="cats"></div></section>
+<section class="section" id="shop"><div class="eyebrow">THE <span class="brand-upper"></span> EDIT</div><h2>A little something for every look</h2><div class="toolbar"><input id="search" placeholder="Search products..." oninput="renderProducts()"><select id="category" onchange="renderProducts()"><option value="All">All categories</option><option>Eyeliners</option><option>Lip Gloss</option><option>Lip Matte</option><option>Concealers</option><option>Mascara</option><option>Tools</option><option>Highlighters</option></select></div><div class="products" id="products"></div></section>
+<section class="section about" id="about"><div class="eyebrow">A NOTE FROM US</div><h2>The <span id="family-brand"></span> Cosmetics family</h2><p>Beauty should feel personal, joyful and effortless. Thank you for supporting a Lebanese brand.</p></section>
 </main>
-<footer class="footer"><a href="#" class="brand">C&#69;LEST&Eacute;<small>COSMETICS</small></a><div>BEAUTY, YOUR WAY • LEBANON</div><div>© <span id="year"></span> C&#101;lest&eacute; Cosmetics</div></footer>
+<footer class="footer"><a href="#" class="brand"><span id="logo-foot"></span><small>COSMETICS</small></a><div>BEAUTY, YOUR WAY • LEBANON</div><div>© <span id="year"></span> <span id="footer-brand"></span> Cosmetics</div></footer>
 <div class="drawer-bg" id="drawer-bg" onclick="if(event.target===this)closeCart()"></div>
 <aside class="drawer" id="drawer"><div class="drawer-head"><h2>Your Bag</h2><button onclick="closeCart()">✕</button></div><div class="drawer-body" id="cart-items"></div><div class="drawer-foot"><strong>Total: <span id="cart-total">$0.00</span></strong><input id="customer-name" placeholder="Your name"><input id="customer-address" placeholder="Delivery area / address"><input id="customer-notes" placeholder="Notes (optional)"><button class="wa" onclick="sendWhatsApp()">Order on WhatsApp</button></div></aside>
 <script src="products.js"></script>
@@ -61,6 +61,16 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 let cart={};
 let activeCat='All';
 const money=n=>'$'+Number(n).toFixed(2);
+// Brand names built from codes so copy-paste can never change the E
+const BRAND_UPPER = "C" + "\u0045" + "L" + "\u0045" + "ST" + "\u00c9";
+const BRAND_MIXED = "C" + "\u0065" + "lest" + "\u00e9";
+document.getElementById('logo-top').textContent = BRAND_UPPER;
+document.getElementById('logo-foot').textContent = BRAND_UPPER;
+document.getElementById('hero-brand').textContent = BRAND_UPPER;
+document.querySelectorAll('.brand-upper').forEach(el=>el.textContent = BRAND_UPPER);
+document.getElementById('family-brand').textContent = BRAND_MIXED;
+document.getElementById('footer-brand').textContent = BRAND_MIXED;
+document.title = BRAND_UPPER + " COSMETICS | Beauty, your way";
 function renderCats(){
   const cats=['All','Eyeliners','Lip Gloss','Lip Matte','Concealers','Mascara','Tools','Highlighters'];
   document.getElementById('cats').innerHTML=cats.map(c=>`<button class="cat ${c===activeCat?'active':''}" onclick="filterCategory('${c}')">${c}</button>`).join('');
@@ -117,7 +127,7 @@ function sendWhatsApp(){
     total+=p.price*q;
     return `• ${p.name}${variant?' - Shade '+variant:''} x ${q} - ${money(p.price*q)}`;
   });
-  let msg=`Hello C\u0065leste Cosmetics! I'd like to place an order:\n\n${lines.join('\n')}\n\nSubtotal: ${money(total)}\nName: ${name}\nDelivery area: ${address}\nNotes: ${notes||'-'}`;
+  let msg=`Hello ` + BRAND_MIXED + ` Cosmetics! I'd like to place an order:\n\n${lines.join('\n')}\n\nSubtotal: ${money(total)}\nName: ${name}\nDelivery area: ${address}\nNotes: ${notes||'-'}`;
   window.open('https://wa.me/96178080655?text='+encodeURIComponent(msg),'_blank','noopener');
 }
 document.getElementById('year').textContent=new Date().getFullYear();
