@@ -5,7 +5,7 @@ const PRODUCTS = [
 {id:"tangerine-pop", name:"Tangerine Pop", category:"Eyeliners", price:6, description:"Bright orange waterproof eyeliner", image:"images/Tangerine 1.jpg", gallery:["images/Tangerine 1.jpg","images/Tangerine 2.jpg"]},
 {id:"leaf-me-alone", name:"Leaf Me Alone", category:"Eyeliners", price:6, description:"Green waterproof eyeliner", image:"images/Leaf 1.jpg", gallery:["images/Leaf 1.jpg","images/Leaf 2.jpg"]},
 {id:"lavender-love", name:"Lavender Love", category:"Eyeliners", price:6, description:"Lavender purple waterproof eyeliner", image:"images/lavender 12.jpg", gallery:["images/lavender 12.jpg","images/Lavender 2.jpg"]},
-{id:"ice-queen", name:"Ice Queen", category:"Eyeliners", price:6, description:"White waterproof eyeliner", image:"images/ice 12.jpg", gallery:["images/ice 12.jpg","images/Ice 2.jpg"]},
+{id:"ice-queen", name:"Ice Queen", category:"Eyeliners", price:6, description:"White waterproof eyeliner", image:"images/ice 123.jpg", gallery:["images/ice 123.jpg","images/Ice 2.jpg"]},
 {id:"blush-crush", name:"Blush Crush", category:"Eyeliners", price:6, description:"Pink red waterproof eyeliner", image:"images/blush crush 1.jpg", gallery:["images/blush crush 1.jpg","images/Blush 2.jpg"]},
 {id:"drama-queen", name:"Drama Queen", category:"Eyeliners", price:6, description:"Hot pink waterproof eyeliner", image:"images/drama queen 1.jpg", gallery:["images/drama queen 1.jpg","images/Drama 2.jpg"]},
 {id:"cinnamon-eyes", name:"Cinnamon Eyes", category:"Eyeliners", price:6, description:"Brown waterproof eyeliner", image:"images/Cinnamon 1.jpg", gallery:["images/Cinnamon 1.jpg","images/Cinnamon 2.jpg"]},
