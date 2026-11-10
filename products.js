@@ -33,9 +33,12 @@ const PRODUCTS = [
 {id:"candid-lipmatte", name:"Candid - LipMatte", category:"Lip Matte", price:9, description:"Rosy nude matte liquid lipstick", image:"images/candid-lipmatte.jpg"},
 {id:"abigael-lipmatte", name:"Abigael - LipMatte", category:"Lip Matte", price:9, description:"Pink matte liquid lipstick", image:"images/abigael-lipmatte.jpg"},
 // --- CONCEALER - 1 PRODUCT WITH SHADES ---
-{id:"celeste-concealer", name:"Celest\u0065's Multi-Use Concealer", category:"Concealers", price:10, description:"Multi-use concealer, full coverage. Choose your shade.", image:"images/celeste-concealer.jpg", variants:["01","02","05","07","12","19"], variantLabel:"Shade"},
+{id:" celeste-concealer", name:"Celest\u0065's Multi-Use Concealer", category:"Concealers", price:10, description:"Multi-use concealer, full coverage. Choose your shade.", image:"images/ celeste-concealer.jpg", variants:["01","02","05","07","12","19"], variantLabel:"Shade"},
 // --- OTHER ---
 {id:"lash-architect-4d", name:"Celest\u0065 Lash Architect 4D", category:"Mascara", price:9, description:"24H waterproof fiber mascara, 4D volume", image:"images/lash-architect-4d.jpg"},
 {id:"beauty-blender", name:"Celest\u0065 Beauty Blender Sponge", category:"Tools", price:6, description:"Soft beauty blender sponge for flawless blending", image:"images/beauty-blender.jpg"},
 {id:"eyeliner-stickers", name:"Celest\u0065 Eyeliner Stickers", category:"Tools", price:1.5, description:"Easy stick-on eyeliner stickers", image:"images/eyeliner-stickers.jpg"},
+// --- HIGHLIGHTERS - NEW ---
+{id:"mermaid-glow", name:"Celest\u0065 Mermaid Glow", category:"Highlighters", price:17, description:"The Ultimate Chameleon Effect - magic in a single swipe, rainbow shimmer highlighter", image:"images/mermaid-glow.jpg"},
+{id:"crystal-diamond", name:"Celest\u0065 Crystal Diamond", category:"Highlighters", price:13, description:"Blinding Diamond Reflects - micro-crystalline glitter, intense sparkle highlighter", image:"images/crystal-diamond.jpg"},
 ];
