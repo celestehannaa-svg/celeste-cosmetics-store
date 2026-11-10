@@ -48,7 +48,6 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 <div class="topbar2">Get a FREE Cosmetic Bag for all orders above 35$ • Delivery Across Lebanon</div>
 <header class="header"><nav class="nav"><button onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})" style="font-size:24px;background:none;border:0;cursor:pointer">☰</button><a href="#" class="logo">CELEST<span style="font-style:italic">É</span><small>Cosmetics | Professional Brand</small></a><div style="display:flex;gap:16px;align-items:center"><span onclick="document.getElementById('search').focus();document.getElementById('shop').scrollIntoView({behavior:'smooth'})" style="font-size:22px;cursor:pointer">🔍</span><button class="cartbtn" onclick="openCart()">🛍️ (<span id="cart-count">0</span>)</button></div></nav></header>
 <main>
-<!-- PRODUCT SLIDER -->
 <section style="max-width:1100px;margin:0 auto;position:relative;overflow:hidden;background:#fff">
   <div id="slider" style="display:flex;transition:transform .5s ease">
     <div style="min-width:100%;position:relative">
@@ -87,13 +86,6 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 
 <section class="section" id="categories">
   <div class="banner"><div><b>🔥 Best Sellers This Week</b><br><span>Blackout Babe • Bomb • Mermaid Glow • Concealer</span></div><button class="cartbtn" style="background:#fff;color:#111" onclick="filterCategory('Eyeliners')">Shop Bestsellers →</button></div>
-  <h2 style="margin-top:20px">CATEGORIES</h2>
-  <div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:8px">
-    <div onclick="filterCategory('Eyeliners')" style="min-width:160px;text-align:center;cursor:pointer"><div style="height:190px;background:#f8ded9;display:flex;align-items:center;justify-content:center;font-size:40px">👁️</div><div style="margin-top:8px;font-family:Georgia,serif">Eyeliners</div></div>
-    <div onclick="filterCategory('Lip Gloss')" style="min-width:160px;text-align:center;cursor:pointer"><div style="height:190px;background:#fde8e8;display:flex;align-items:center;justify-content:center;font-size:40px">💋</div><div style="margin-top:8px;font-family:Georgia,serif">Lip Gloss</div></div>
-    <div onclick="filterCategory('Lip Matte')" style="min-width:160px;text-align:center;cursor:pointer"><div style="height:190px;background:#f3e8ff;display:flex;align-items:center;justify-content:center;font-size:40px">💄</div><div style="margin-top:8px;font-family:Georgia,serif">Lip Matte</div></div>
-    <div onclick="filterCategory('Highlighters')" style="min-width:160px;text-align:center;cursor:pointer"><div style="height:190px;background:#fef3c7;display:flex;align-items:center;justify-content:center;font-size:40px">✨</div><div style="margin-top:8px;font-family:Georgia,serif">Highlighters</div></div>
-  </div>
   <div class="toolbar" id="cats"></div>
 </section>
 <section class="section" id="shop"><div style="font-size:12px;letter-spacing:.22em;color:#b6777f;font-weight:700">THE CELESTÉ EDIT</div><h2>A little something for every look</h2><div class="toolbar"><input id="search" placeholder="Search products..." oninput="render()"><select id="catSelect" onchange="render()"><option value="All">All categories</option></select></div><div class="products" id="grid"></div></section>
