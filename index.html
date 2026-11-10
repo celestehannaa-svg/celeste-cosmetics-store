@@ -48,33 +48,9 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 <div class="topbar2">Get a FREE Cosmetic Bag for all orders above 35$ • Delivery Across Lebanon</div>
 <header class="header"><nav class="nav"><button onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})" style="font-size:24px;background:none;border:0;cursor:pointer">☰</button><a href="#" class="logo">CELEST<span style="font-style:italic">É</span><small>Cosmetics | Professional Brand</small></a><div style="display:flex;gap:16px;align-items:center"><span onclick="document.getElementById('search').focus();document.getElementById('shop').scrollIntoView({behavior:'smooth'})" style="font-size:22px;cursor:pointer">🔍</span><button class="cartbtn" onclick="openCart()">🛍️ (<span id="cart-count">0</span>)</button></div></nav></header>
 <main>
+<!-- RANDOM SLIDER - 3 DIFFERENT PRODUCTS EVERY VISIT -->
 <section style="max-width:1100px;margin:0 auto;position:relative;overflow:hidden;background:#fff">
-  <div id="slider" style="display:flex;transition:transform .5s ease">
-    <div style="min-width:100%;position:relative">
-      <img src="images/Shock 1.jpg" style="width:100%;height:480px;object-fit:cover;display:block" onerror="this.src='images/Blackout 1.PNG'">
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(to top, rgba(0,0,0,.65), transparent);color:#fff">
-        <div style="font-size:11px;letter-spacing:.25em">11 SHADES • $6</div>
-        <div style="font-family:Georgia,serif;font-size:30px;margin:6px 0">Eyeliners That Pop</div>
-        <button onclick="filterCategory('Eyeliners')" style="background:#fff;color:#111;border:0;padding:12px 26px;border-radius:999px;font-weight:800;cursor:pointer">Shop Eyeliners →</button>
-      </div>
-    </div>
-    <div style="min-width:100%;position:relative">
-      <img src="images/aurora_crystal_1st.jpg" style="width:100%;height:480px;object-fit:cover;display:block" onerror="this.src='images/Georgia Peach 1.jpg'">
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(to top, rgba(0,0,0,.65), transparent);color:#fff">
-        <div style="font-size:11px;letter-spacing:.25em">LIP GLOSS & MATTE • $9 - $12</div>
-        <div style="font-family:Georgia,serif;font-size:30px;margin:6px 0">Glossy Lips, Your Way</div>
-        <button onclick="filterCategory('Lip Gloss')" style="background:#fff;color:#111;border:0;padding:12px 26px;border-radius:999px;font-weight:800;cursor:pointer">Shop Lips →</button>
-      </div>
-    </div>
-    <div style="min-width:100%;position:relative">
-      <img src="images/Mermaid 1.jpg" style="width:100%;height:480px;object-fit:cover;display:block" onerror="this.src='images/Crystal Diamond 1.jpg'">
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(to top, rgba(0,0,0,.65), transparent);color:#fff">
-        <div style="font-size:11px;letter-spacing:.25em">BEST SELLER • $13 - $17</div>
-        <div style="font-family:Georgia,serif;font-size:30px;margin:6px 0">Mermaid Glow ✨ Blinding Shine</div>
-        <button onclick="filterCategory('Highlighters')" style="background:#fff;color:#111;border:0;padding:12px 26px;border-radius:999px;font-weight:800;cursor:pointer">Shop Highlighters →</button>
-      </div>
-    </div>
-  </div>
+  <div id="slider" style="display:flex;transition:transform .5s ease"></div>
   <div style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2">
     <span class="dot" onclick="goSlide(0)" style="width:10px;height:10px;border-radius:50%;background:#fff;cursor:pointer"></span>
     <span class="dot" onclick="goSlide(1)" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer"></span>
@@ -91,12 +67,28 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 <section class="section" id="shop"><div style="font-size:12px;letter-spacing:.22em;color:#b6777f;font-weight:700">THE CELESTÉ EDIT</div><h2>A little something for every look</h2><div class="toolbar"><input id="search" placeholder="Search products..." oninput="render()"><select id="catSelect" onchange="render()"><option value="All">All categories</option></select></div><div class="products" id="grid"></div></section>
 <section class="section about" id="about"><div style="font-size:12px;letter-spacing:.22em;color:#b6777f;font-weight:700">OUR STORY</div><h2>The Celesté family</h2><p style="line-height:1.7;color:#666;max-width:700px">We believe beauty should feel like you — bold when you want it, soft when you need it. Every shade is chosen with love in Lebanon, for every day, every mood, every you.</p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px"><span style="background:#fff;border:1px solid #ddd;padding:8px 14px;border-radius:999px;font-size:13px">💄 36 Products</span><span style="background:#fff;border:1px solid #ddd;padding:8px 14px;border-radius:999px;font-size:13px">🇱🇧 Made with love in Lebanon</span><span style="background:#fff;border:1px solid #ddd;padding:8px 14px;border-radius:999px;font-size:13px">📦 Order on WhatsApp</span></div></section>
 </main>
-<footer class="footer"><div><b>© 2026 Celesté Cosmetics</b><br><span style="color:#888">Beauty, your way.</span></div><div>WhatsApp: +961 70 005 510<br>Instagram: @celeste.lebanon</div></footer>
+<footer class="footer"><div><b>© 2026 Celesté Cosmetics</b><br><span style="color:#888">Beauty, your way.</span></div><div>WhatsApp: +961 70 005 510<br>Instagram: @celeste.cosmetics</div></footer>
 <div class="drawer-bg" id="bg" onclick="closeCart()"></div>
-<aside class="drawer" id="drawer"><div class="drawer-head"><b>Your Bag</b><button onclick="closeCart()">✕</button></div><div class="drawer-body" id="cart-items"></div><div class="drawer-foot"><div style="display:flex;justify-content:space-between"><span>Total</span><b id="cart-total">$0.00</b></div><div style="font-size:12px;color:#888">Delivery calculated on WhatsApp • FREE Cosmetic Bag for orders above 35$</div><input id="cust-name" placeholder="Your name"><input id="cust-area" placeholder="Your area / city"><button class="wa" onclick="checkout()">Order on WhatsApp →</button></div></aside>
+<aside class="drawer" id="drawer"><div class="drawer-head"><b>Your Bag</b><button onclick="closeCart()">✕</button></div><div class="drawer-body" id="cart-items"></div><div class="drawer-foot"><div style="display:flex;justify-content:space-between"><span>Total</span><b id="cart-total">$0.00</b></div><div style="font-size:12px;color:#888">Delivery calculated on 【entity-WhatsApp¦canonical_name=WhatsApp】 • FREE Cosmetic Bag for orders above 35$</div><input id="cust-name" placeholder="Your name"><input id="cust-area" placeholder="Your area / city"><button class="wa" onclick="checkout()">Order on WhatsApp →</button></div></aside>
 <script src="products.js"></script>
 <script>
-let curSlide=0;function goSlide(n){curSlide=n;document.getElementById('slider').style.transform='translateX(-'+(n*100)+'%)';document.querySelectorAll('.dot').forEach((d,i)=>d.style.background=i===n?'#fff':'rgba(255,255,255,.5)')}function nextSlide(){goSlide((curSlide+1)%3)}function prevSlide(){goSlide((curSlide+2)%3)}setInterval(nextSlide,3500);
+let curSlide=0;
+function goSlide(n){curSlide=n;document.getElementById('slider').style.transform='translateX(-'+(n*100)+'%)';document.querySelectorAll('.dot').forEach((d,i)=>d.style.background=i===n?'#fff':'rgba(255,255,255,.5)')}
+function nextSlide(){goSlide((curSlide+1)%3)}
+function prevSlide(){goSlide((curSlide+2)%3)}
+setInterval(nextSlide,3500);
+function buildRandomSlider(){
+  let shuffled=[...PRODUCTS].sort(()=>Math.random()-0.5).slice(0,3);
+  document.getElementById('slider').innerHTML=shuffled.map(p=>`
+    <div style="min-width:100%;position:relative">
+      <img src="${p.image}" style="width:100%;height:480px;object-fit:cover;display:block">
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(to top, rgba(0,0,0,.65), transparent);color:#fff">
+        <div style="font-size:11px;letter-spacing:.25em">${p.category.toUpperCase()} • $${p.price.toFixed(2)}</div>
+        <div style="font-family:Georgia,serif;font-size:30px;margin:6px 0">${p.name}</div>
+        <button onclick="filterCategory('${p.category}')" style="background:#fff;color:#111;border:0;padding:12px 26px;border-radius:999px;font-weight:800;cursor:pointer">Shop ${p.category} →</button>
+      </div>
+    </div>`).join('');
+}
 let cart=JSON.parse(localStorage.getItem("celeste_cart")||"[]");let activeCat="All";
 const cats=["All","Eyeliners","Lip Gloss","Lip Matte","Concealers","Mascara","Tools","Highlighters"];
 const catSelect=document.getElementById("catSelect");cats.slice(1).forEach(c=>{let o=document.createElement("option");o.value=c;o.textContent=c;catSelect.appendChild(o)});
@@ -122,7 +114,7 @@ function updateCart(){document.getElementById("cart-count").textContent=cart.red
 function changeQty(i,d){cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);saveCart()}function removeItem(i){cart.splice(i,1);saveCart()}
 function openCart(){document.getElementById("drawer").classList.add("open");document.getElementById("bg").classList.add("open");updateCart()}function closeCart(){document.getElementById("drawer").classList.remove("open");document.getElementById("bg").classList.remove("open")}
 function checkout(){let total=cart.reduce((a,c)=>a+PRODUCTS.find(x=>x.id===c.id).price*c.qty,0);let msg="Hi Celesté! I want to order:%0A%0A"+cart.map(c=>{const p=PRODUCTS.find(x=>x.id===c.id);return "- "+p.name+(c.variant?" - Shade "+c.variant:"")+" x"+c.qty+" - $"+(p.price*c.qty).toFixed(2)}).join("%0A")+"%0A%0ATotal: $"+total.toFixed(2)+"%0AName: "+encodeURIComponent(document.getElementById("cust-name").value)+"%0AArea: "+encodeURIComponent(document.getElementById("cust-area").value);window.open("https://wa.me/96170005510?text="+msg,"_blank")}
-render();updateCart();
+render();updateCart();buildRandomSlider();
 </script>
 </body>
 </html>
