@@ -9,7 +9,7 @@ const PRODUCTS = [
 {id:"blush-crush", name:"Blush Crush", category:"Eyeliners", price:6, description:"Pink red waterproof eyeliner", image:"images/blush-crush.jpg"},
 {id:"drama-queen", name:"Drama Queen", category:"Eyeliners", price:6, description:"Hot pink waterproof eyeliner", image:"images/drama-queen.jpg"},
 {id:"cinnamon-eyes", name:"Cinnamon Eyes", category:"Eyeliners", price:6, description:"Brown waterproof eyeliner", image:"images/cinnamon-eyes.jpg"},
-{id:"barbie-mood", name:"Barbie Mood", category:"Eyeliners", price:6, description:"Baby pink waterproof eyeliner", image:"images/barbie-mood.jpg"},
+{id:"barbie-mood", name:"Barbi\u0065 Mood", category:"Eyeliners", price:6, description:"Baby pink waterproof eyeliner", image:"images/barbie-mood.jpg"},
 {id:"sky-baby", name:"Sky Baby", category:"Eyeliners", price:6, description:"Light blue waterproof eyeliner", image:"images/sky-baby.jpg"},
 // --- LIP GLOSS ---
 {id:"georgia-peach-lipgloss", name:"Georgia Peach - LipGloss", category:"Lip Gloss", price:10, description:"Peach glossy lip gloss", image:"images/georgia-peach-lipgloss.jpg"},
@@ -29,13 +29,13 @@ const PRODUCTS = [
 {id:"quiet-lipmatte", name:"Quiet - LipMatte", category:"Lip Matte", price:9, description:"Soft peach matte liquid lipstick", image:"images/quiet-lipmatte.jpg"},
 {id:"bawse-lipmatte", name:"Bawse - LipMatte", category:"Lip Matte", price:9, description:"Dusty mauve matte liquid lipstick", image:"images/bawse-lipmatte.jpg"},
 {id:"liquid-fire-lipmatte", name:"Liquid Fire - LipMatte", category:"Lip Matte", price:9, description:"Deep plum matte liquid lipstick", image:"images/liquid-fire-lipmatte.jpg"},
-{id:"adele-19-lipmatte", name:"Ad"+"ele 19 - LipMatte", category:"Lip Matte", price:9, description:"Nude beige matte liquid lipstick", image:"images/adele-19-lipmatte.jpg"},
+{id:"adele-19-lipmatte", name:"19 - LipMatte", category:"Lip Matte", price:9, description:"Nude beige matte liquid lipstick", image:"images/adele-19-lipmatte.jpg"},
 {id:"candid-lipmatte", name:"Candid - LipMatte", category:"Lip Matte", price:9, description:"Rosy nude matte liquid lipstick", image:"images/candid-lipmatte.jpg"},
 {id:"abigael-lipmatte", name:"Abigael - LipMatte", category:"Lip Matte", price:9, description:"Pink matte liquid lipstick", image:"images/abigael-lipmatte.jpg"},
 // --- CONCEALER - 1 PRODUCT WITH SHADES ---
-{id:"【entity-celeste¦canonical_name=Celeste】-concealer", name:"【entity-Celeste¦canonical_name=Celeste】's Multi-Use Concealer", category:"Concealers", price:10, description:"Multi-use concealer, full coverage. Choose your shade.", image:"images/【entity-celeste¦canonical_name=Celeste】-concealer.jpg", variants:["01","02","05","07","12","19"], variantLabel:"Shade"},
+{id:"celeste-concealer", name:"Celest\u0065's Multi-Use Concealer", category:"Concealers", price:10, description:"Multi-use concealer, full coverage. Choose your shade.", image:"images/celeste-concealer.jpg", variants:["01","02","05","07","12","19"], variantLabel:"Shade"},
 // --- OTHER ---
-{id:"lash-architect-4d", name:"【entity-Celeste¦canonical_name=Celeste】 Lash Architect 4D", category:"Mascara", price:9, description:"24H waterproof fiber mascara, 4D volume", image:"images/lash-architect-4d.jpg"},
-{id:"beauty-blender", name:"【entity-Celeste¦canonical_name=Celeste】 Beauty Blender Sponge", category:"Tools", price:6, description:"Soft beauty blender sponge for flawless blending", image:"images/beauty-blender.jpg"},
-{id:"eyeliner-stickers", name:"【entity-Celeste¦canonical_name=Celeste】 Eyeliner Stickers", category:"Tools", price:1.5, description:"Easy stick-on eyeliner stickers", image:"images/eyeliner-stickers.jpg"},
+{id:"lash-architect-4d", name:"Celest\u0065 Lash Architect 4D", category:"Mascara", price:9, description:"24H waterproof fiber mascara, 4D volume", image:"images/lash-architect-4d.jpg"},
+{id:"beauty-blender", name:"Celest\u0065 Beauty Blender Sponge", category:"Tools", price:6, description:"Soft beauty blender sponge for flawless blending", image:"images/beauty-blender.jpg"},
+{id:"eyeliner-stickers", name:"Celest\u0065 Eyeliner Stickers", category:"Tools", price:1.5, description:"Easy stick-on eyeliner stickers", image:"images/eyeliner-stickers.jpg"},
 ];
