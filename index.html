@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>【entity-Celeste Cosmetics¦canonical_name=Celeste】 | Beauty, your way</title>
-<meta name="description" content="Discover 【entity-Celeste Cosmetics¦canonical_name=Celeste】 - beauty essentials made to make every look yours.">
+<title>C&#69;LEST&Eacute; COSMETICS | Beauty, your way</title>
+<meta name="description" content="Discover C&#69;LEST&Eacute; Cosmetics - beauty essentials made to make every look yours.">
 <style>
 :root{--ink:#382824;--cream:#faf6f1;--blush:#f8ded9;--rose:#b6777f;--line:#e9dfd8;--white:#fff}
 *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Helvetica,Arial,sans-serif}
@@ -46,14 +46,14 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 </head>
 <body>
 <div class="announcement">A LITTLE BEAUTY, A LOT OF YOU • FREE SHIPPING DETAILS ON WHATSAPP</div>
-<header class="header"><nav class="nav"><a href="#" class="brand">【entity-CELESTÉ¦canonical_name=Celeste】<small>COSMETICS</small></a><div class="nav-links"><a href="#shop">Shop</a><a href="#categories">Collections</a><a href="#about">Our story</a></div><button class="cartbtn" onclick="openCart()">BAG (<span id="cart-count">0</span>)</button></nav></header>
+<header class="header"><nav class="nav"><a href="#" class="brand">C&#69;LEST&Eacute;<small>COSMETICS</small></a><div class="nav-links"><a href="#shop">Shop</a><a href="#categories">Collections</a><a href="#about">Our story</a></div><button class="cartbtn" onclick="openCart()">BAG (<span id="cart-count">0</span>)</button></nav></header>
 <main>
-<section class="hero"><div><div class="hero-copy">BEAUTY, YOUR WAY</div><h1>Make every<br>look yours.</h1><p>Discover your next beauty essential. Thoughtfully selected shades, made for every day in Lebanon.</p><button class="cartbtn" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Shop Collection ↓</button></div><div class="hero-art">【entity-CELESTÉ¦canonical_name=Celeste】<br>COSMETICS</div></section>
-<section class="section" id="categories"><div class="eyebrow">【entity-CELESTE COSMETICS¦canonical_name=Celeste】</div><h2>Shop by collection</h2><div class="toolbar" id="cats"></div></section>
-<section class="section" id="shop"><div class="eyebrow">THE 【entity-CELESTÉ¦canonical_name=Celeste】 EDIT</div><h2>A little something for every look</h2><div class="toolbar"><input id="search" placeholder="Search products..." oninput="renderProducts()"><select id="category" onchange="renderProducts()"><option value="All">All categories</option><option>Eyeliners</option><option>Lip Gloss</option><option>Lip Matte</option><option>Concealers</option><option>Mascara</option><option>Tools</option></select></div><div class="products" id="products"></div></section>
-<section class="section about" id="about"><div class="eyebrow">A NOTE FROM US</div><h2>The Celesté Cosmetics family</h2><p>Beauty should feel personal, joyful and effortless. Thank you for supporting a Lebanese brand.</p></section>
+<section class="hero"><div><div class="hero-copy">BEAUTY, YOUR WAY</div><h1>Make every<br>look yours.</h1><p>Discover your next beauty essential. Thoughtfully selected shades, made for every day in Lebanon.</p><button class="cartbtn" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Shop Collection ↓</button></div><div class="hero-art">C&#69;LEST&Eacute;<br>COSMETICS</div></section>
+<section class="section" id="categories"><div class="eyebrow">C&#69;LEST&Eacute; COSMETICS</div><h2>Shop by collection</h2><div class="toolbar" id="cats"></div></section>
+<section class="section" id="shop"><div class="eyebrow">THE C&#69;LEST&Eacute; EDIT</div><h2>A little something for every look</h2><div class="toolbar"><input id="search" placeholder="Search products..." oninput="renderProducts()"><select id="category" onchange="renderProducts()"><option value="All">All categories</option><option>Eyeliners</option><option>Lip Gloss</option><option>Lip Matte</option><option>Concealers</option><option>Mascara</option><option>Tools</option></select></div><div class="products" id="products"></div></section>
+<section class="section about" id="about"><div class="eyebrow">A NOTE FROM US</div><h2>The C&#69;lest&eacute; Cosmetics family</h2><p>Beauty should feel personal, joyful and effortless. Thank you for supporting a Lebanese brand.</p></section>
 </main>
-<footer class="footer"><a href="#" class="brand">CELESTÉ<small>COSMETICS</small></a><div>BEAUTY, YOUR WAY • LEBANON</div><div>© <span id="year"></span> Celeste Cosmetics</div></footer>
+<footer class="footer"><a href="#" class="brand">C&#69;LEST&Eacute;<small>COSMETICS</small></a><div>BEAUTY, YOUR WAY • LEBANON</div><div>© <span id="year"></span> C&#69;lest&#101; Cosmetics</div></footer>
 <div class="drawer-bg" id="drawer-bg" onclick="if(event.target===this)closeCart()"></div>
 <aside class="drawer" id="drawer"><div class="drawer-head"><h2>Your Bag</h2><button onclick="closeCart()">✕</button></div><div class="drawer-body" id="cart-items"></div><div class="drawer-foot"><strong>Total: <span id="cart-total">$0.00</span></strong><input id="customer-name" placeholder="Your name"><input id="customer-address" placeholder="Delivery area / address"><input id="customer-notes" placeholder="Notes (optional)"><button class="wa" onclick="sendWhatsApp()">Order on WhatsApp</button></div></aside>
 <script src="products.js"></script>
@@ -117,7 +117,7 @@ function sendWhatsApp(){
     total+=p.price*q;
     return `• ${p.name}${variant?' - Shade '+variant:''} x ${q} - ${money(p.price*q)}`;
   });
-  let msg=`Hello Celeste Cosmetics! I'd like to place an order:\n\n${lines.join('\n')}\n\nSubtotal: ${money(total)}\nName: ${name}\nDelivery area: ${address}\nNotes: ${notes||'-'}`;
+  let msg=`Hello C\u0065leste Cosmetics! I'd like to place an order:\n\n${lines.join('\n')}\n\nSubtotal: ${money(total)}\nName: ${name}\nDelivery area: ${address}\nNotes: ${notes||'-'}`;
   window.open('https://wa.me/96178080655?text='+encodeURIComponent(msg),'_blank','noopener');
 }
 document.getElementById('year').textContent=new Date().getFullYear();
