@@ -1,5 +1,5 @@
 const PRODUCTS = [
-// --- EYELINERS ---
+// --- EYELINERS - $6 ---
 {id:"blackout-babe", name:"Blackout Babe", category:"Eyeliners", price:6, description:"Intense black waterproof eyeliner", image:"images/blackout-babe.jpg"},
 {id:"shock-me-blue", name:"Shock Me Blue", category:"Eyeliners", price:6, description:"Electric blue waterproof eyeliner", image:"images/shock-me-blue.jpg"},
 {id:"tangerine-pop", name:"Tangerine Pop", category:"Eyeliners", price:6, description:"Bright orange waterproof eyeliner", image:"images/tangerine-pop.jpg"},
@@ -11,35 +11,31 @@ const PRODUCTS = [
 {id:"cinnamon-eyes", name:"Cinnamon Eyes", category:"Eyeliners", price:6, description:"Brown waterproof eyeliner", image:"images/cinnamon-eyes.jpg"},
 {id:"barbie-mood", name:"Barbie Mood", category:"Eyeliners", price:6, description:"Baby pink waterproof eyeliner", image:"images/barbie-mood.jpg"},
 {id:"sky-baby", name:"Sky Baby", category:"Eyeliners", price:6, description:"Light blue waterproof eyeliner", image:"images/sky-baby.jpg"},
-
 // --- LIP GLOSS ---
 {id:"georgia-peach-lipgloss", name:"Georgia Peach - LipGloss", category:"Lip Gloss", price:10, description:"Peach glossy lip gloss", image:"images/georgia-peach-lipgloss.jpg"},
 {id:"skin-lipgloss", name:"Skin - LipGloss", category:"Lip Gloss", price:10, description:"Nude glossy lip gloss", image:"images/skin-lipgloss.jpg"},
 {id:"deep-lipgloss", name:"Deep - LipGloss", category:"Lip Gloss", price:10, description:"Deep red glossy lip gloss", image:"images/deep-lipgloss.jpg"},
 {id:"bombshell-lipgloss", name:"BombShell - LipGloss", category:"Lip Gloss", price:10, description:"Peachy nude glossy lip gloss", image:"images/bombshell-lipgloss.jpg"},
-{id:"magic-lipgloss", name:"Magic - LipGloss", category:"Lip Gloss", price:12, description:"Light pink glossy lip gloss", image:"images/magic-lipgloss.jpg"},
+{id:"magic-lipgloss", name:"Magic - LipGloss", category:"Lip Gloss", price:10, description:"Light pink glossy lip gloss", image:"images/magic-lipgloss.jpg"},
 {id:"pisces-lipgloss", name:"Pisces - LipGloss", category:"Lip Gloss", price:12, description:"Caramel glossy lip gloss", image:"images/pisces-lipgloss.jpg"},
 {id:"mysterious-lipgloss", name:"Mysterious - LipGloss", category:"Lip Gloss", price:10, description:"Clear shimmer glossy lip gloss", image:"images/mysterious-lipgloss.jpg"},
 {id:"miss-lady-lipgloss", name:"Miss Lady - LipGloss", category:"Lip Gloss", price:10, description:"Bright red glossy lip gloss", image:"images/miss-lady-lipgloss.jpg"},
-{id:"aurora-crystal-lipgloss", name:"Aurora Crystal - LipGloss", category:"Lip Gloss", price:12, description:"Crystal clear glossy lip gloss", image:"images/aurora-crystal-lipgloss.jpg"},
-{id:"sweet-mystery-lipgloss", name:"Sweet Mystery - LipGloss", category:"Lip Gloss", price:10, description:"Hot pink glossy lip gloss", image:"images/sweet-mystery-lipgloss.jpg"},
-
-// --- LIP MATTE ---
+{id:"aurora-crystal-lipgloss", name:"Aurora Crystal - LipGloss", category:"Lip Gloss", price:10, description:"Crystal clear glossy lip gloss", image:"images/aurora-crystal-lipgloss.jpg"},
+{id:"sweet-mystery-lipgloss", name:"Sweet Mystery - LipGloss", category:"Lip Gloss", price:12, description:"Hot pink glossy lip gloss", image:"images/sweet-mystery-lipgloss.jpg"},
+// --- LIP MATTE - $9 ---
 {id:"bomb-lipmatte", name:"Bomb - LipMatte", category:"Lip Matte", price:9, description:"Red matte liquid lipstick", image:"images/bomb-lipmatte.jpg"},
 {id:"icy-lipmatte", name:"Icy - LipMatte", category:"Lip Matte", price:9, description:"Pink mauve matte liquid lipstick", image:"images/icy-lipmatte.jpg"},
 {id:"ginger-lipmatte", name:"Ginger - LipMatte", category:"Lip Matte", price:9, description:"Warm nude matte liquid lipstick", image:"images/ginger-lipmatte.jpg"},
 {id:"quiet-lipmatte", name:"Quiet - LipMatte", category:"Lip Matte", price:9, description:"Soft peach matte liquid lipstick", image:"images/quiet-lipmatte.jpg"},
 {id:"bawse-lipmatte", name:"Bawse - LipMatte", category:"Lip Matte", price:9, description:"Dusty mauve matte liquid lipstick", image:"images/bawse-lipmatte.jpg"},
 {id:"liquid-fire-lipmatte", name:"Liquid Fire - LipMatte", category:"Lip Matte", price:9, description:"Deep plum matte liquid lipstick", image:"images/liquid-fire-lipmatte.jpg"},
-{id:"【entity-adele¦canonical_name=Adele】-19-lipmatte", name:"【entity-Adele¦canonical_name=Adele】 19 - LipMatte", category:"Lip Matte", price:9, description:"Nude beige matte liquid lipstick", image:"images/【entity-adele¦canonical_name=Adele】-19-lipmatte.jpg"},
+{id:"adele-19-lipmatte", name:"Ad"+"ele 19 - LipMatte", category:"Lip Matte", price:9, description:"Nude beige matte liquid lipstick", image:"images/adele-19-lipmatte.jpg"},
 {id:"candid-lipmatte", name:"Candid - LipMatte", category:"Lip Matte", price:9, description:"Rosy nude matte liquid lipstick", image:"images/candid-lipmatte.jpg"},
 {id:"abigael-lipmatte", name:"Abigael - LipMatte", category:"Lip Matte", price:9, description:"Pink matte liquid lipstick", image:"images/abigael-lipmatte.jpg"},
-
 // --- CONCEALER - 1 PRODUCT WITH SHADES ---
-{id:"celeste-concealer", name:"Celesté's Multi-Use Concealer", category:"Concealers", price:10, description:"Multi-use concealer, full coverage, 6 shades", image:"images/celeste-concealer.jpg", variants:["01","02","05","07","12","19"], variantLabel:"Shade"},
-
+{id:"【entity-celeste¦canonical_name=Celeste】-concealer", name:"【entity-Celeste¦canonical_name=Celeste】's Multi-Use Concealer", category:"Concealers", price:10, description:"Multi-use concealer, full coverage. Choose your shade.", image:"images/【entity-celeste¦canonical_name=Celeste】-concealer.jpg", variants:["01","02","05","07","12","19"], variantLabel:"Shade"},
 // --- OTHER ---
-{id:"lash-architect-4d", name:"Celesté Lash Architect 4D", category:"Mascara", price:9, description:"24H waterproof fiber mascara, 4D volume", image:"images/lash-architect-4d.jpg"},
-{id:"beauty-blender", name:"Celesté Beauty Blender Sponge", category:"Tools", price:6, description:"Soft beauty blender sponge for flawless blending", image:"images/beauty-blender.jpg"},
-{id:"eyeliner-stickers", name:"Celesté Eyeliner Stickers", category:"Tools", price:1.5, description:"Easy stick-on eyeliner stickers", image:"images/eyeliner-stickers.jpg"},
+{id:"lash-architect-4d", name:"【entity-Celeste¦canonical_name=Celeste】 Lash Architect 4D", category:"Mascara", price:9, description:"24H waterproof fiber mascara, 4D volume", image:"images/lash-architect-4d.jpg"},
+{id:"beauty-blender", name:"【entity-Celeste¦canonical_name=Celeste】 Beauty Blender Sponge", category:"Tools", price:6, description:"Soft beauty blender sponge for flawless blending", image:"images/beauty-blender.jpg"},
+{id:"eyeliner-stickers", name:"【entity-Celeste¦canonical_name=Celeste】 Eyeliner Stickers", category:"Tools", price:1.5, description:"Easy stick-on eyeliner stickers", image:"images/eyeliner-stickers.jpg"},
 ];
