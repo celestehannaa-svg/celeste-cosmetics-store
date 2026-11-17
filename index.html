@@ -49,15 +49,14 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 .xmas-select{width:100%;padding:11px;border:1px solid #ddd;border-radius:10px;background:#fff;margin-top:6px}
 .xmas-label{font-size:12px;font-weight:700;margin-top:10px;display:block}
 .wa-small{background:#fff!important;color:#111!important;border:1px solid #ddd!important;padding:10px!important;border-radius:999px!important;width:100%;margin-top:8px;cursor:pointer;font-size:13px}
-/* BLENDED HERO - NO BOX, NO EDGES */
+/* FIXED - SHOW FULL VIDEO, NO CUT */
 .hero-blend{margin:0;padding:0;background:#fff}
-.hero-blend video{width:100%;height:auto;max-height:620px;object-fit:cover;display:block;border:0;border-radius:0;outline:none;
-  -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 8%, black 82%, transparent 100%);
-  mask-image:linear-gradient(to bottom, transparent 0%, black 8%, black 82%, transparent 100%);
+.hero-blend video{width:100%;height:auto;display:block;border:0;border-radius:0;outline:none;object-fit:contain;background:#fff;
+  -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%);
+  mask-image:linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%);
 }
 .hero-text{max-width:1100px;margin:0 auto;text-align:center;padding:14px 16px 0}
-.hero-caption{position:relative;max-width:420px;margin:-70px auto 0;z-index:2;text-align:center;padding:0 16px}
-@media(max-width:760px){.hero-blend video{max-height:520px}.hero-caption{margin-top:-60px}}
+.hero-caption{position:relative;max-width:420px;margin:6px auto 0;z-index:2;text-align:center;padding:0 16px}
 </style>
 </head>
 <body>
@@ -66,7 +65,7 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 <header class="header"><nav class="nav"><button onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})" style="font-size:24px;background:none;border:0;cursor:pointer">☰</button><a href="#" class="logo">CELEST<span style="font-style:italic">É</span><small>Cosmetics | Professional Brand</small></a><div style="display:flex;gap:16px;align-items:center"><span onclick="document.getElementById('search').focus();document.getElementById('shop').scrollIntoView({behavior:'smooth'})" style="font-size:22px;cursor:pointer">🔍</span><button class="cartbtn elegant-cart" onclick="openCart()">Bag &nbsp;·&nbsp; <span id="cart-count">0</span></button></div></nav></header>
 <main>
 
-<!-- BLENDED VIDEO HOMESCREEN - NO EDGES -->
+<!-- FULL VIDEO - NO CUT, BLENDED -->
 <section class="hero-blend">
   <div class="hero-text">
     <div style="font-size:11px;letter-spacing:.3em;color:#b6777f;font-weight:700">CELESTÉ LIP GLOSS • LED + MIRROR</div>
