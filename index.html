@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CELESTE COSMETICS | Beauty, your way</title>
-<meta name="description" content="Discover beauty essentials made to make every look yours.">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#fff;color:#222;font-family:Helvetica,Arial,sans-serif}
 a{color:inherit;text-decoration:none}button,input,select{font:inherit}
@@ -15,18 +14,16 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 .logo{font-family:'Didot','Bodoni MT','Playfair Display',Georgia,serif;font-size:38px;line-height:1;text-align:center}
 .logo small{display:block;font-size:9px;letter-spacing:.2em;color:#666;font-family:Helvetica,Arial,sans-serif;margin-top:4px}
 .cartbtn{background:#111;color:#fff;border:0;border-radius:999px;padding:10px 16px;cursor:pointer}
-.elegant-cart{background:#faf6f1!important;color:#111!important;border:1px solid #e8ddd5!important;padding:8px 15px!important;font-size:13px!important;letter-spacing:.12em!important;font-family:Georgia,serif!important;font-weight:400!important;border-radius:999px!important;box-shadow:0 1px 6px rgba(0,0,0,.05)}
-.elegant-cart:active{transform:scale(.97)}
+.elegant-cart{background:#faf6f1!important;color:#111!important;border:1px solid #e8ddd5!important;padding:8px 15px!important;font-size:13px!important;letter-spacing:.12em!important;font-family:Georgia,serif!important;border-radius:999px!important}
 .section{max-width:1100px;margin:0 auto;padding:22px 16px}
 .section h2{font-family:Georgia,serif;font-weight:400;font-size:32px;margin:6px 0}
 .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}.toolbar input,.toolbar select{padding:11px 12px;border:1px solid #ddd;border-radius:999px;background:#fff;min-width:180px}
-.cat{border:1px solid #ddd;background:#fff;padding:9px 14px;border-radius:999px;cursor:pointer;font-size:13px;color:#111!important}.cat.active{background:#111!important;color:#fff!important;border-color:#111!important}
-.toolbar a,.toolbar button{color:#111!important}
-.banner{background:#111;color:#fff;border-radius:12px;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:8px 0}.banner b{font-size:18px;font-family:Georgia,serif}
-.elegant-banner{background:#faf6f1!important;color:#111!important;border:1px solid #e8ddd5!important;border-radius:16px!important;padding:18px!important;box-shadow:0 2px 10px rgba(0,0,0,.03)}
-.elegant-banner b{font-family:Georgia,serif!important;font-weight:400!important;font-size:22px!important;letter-spacing:.02em}
-.elegant-banner span{font-size:13px;color:#888;line-height:1.5}
-.elegant-btn{background:#fff!important;color:#111!important;border:1px solid #ddd!important;padding:9px 16px!important;border-radius:999px!important;font-size:13px!important;font-family:Georgia,serif!important;letter-spacing:.05em!important;cursor:pointer}
+.cat{border:1px solid #ddd;background:#fff;padding:9px 14px;border-radius:999px;cursor:pointer;font-size:13px}.cat.active{background:#111!important;color:#fff!important}
+.banner{background:#111;color:#fff;border-radius:12px;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:8px 0}
+.elegant-banner{background:#faf6f1!important;color:#111!important;border:1px solid #e8ddd5!important;border-radius:16px!important;padding:18px!important}
+.elegant-banner b{font-family:Georgia,serif!important;font-weight:400!important;font-size:22px!important}
+.elegant-banner span{font-size:13px;color:#888}
+.elegant-btn{background:#fff!important;color:#111!important;border:1px solid #ddd!important;padding:9px 16px!important;border-radius:999px!important;font-size:13px!important;font-family:Georgia,serif!important;cursor:pointer}
 .products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 14px}
 @media(max-width:760px){.products{grid-template-columns:repeat(2,1fr)!important;gap:16px 10px}}
 .product{background:#fff;border:0;display:flex;flex-direction:column;position:relative}
@@ -42,33 +39,14 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 .about{background:#faf6f1;border-top:1px solid #eee;border-bottom:1px solid #eee}
 .footer{max-width:1100px;margin:0 auto;padding:22px 16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px}
 .drawer-bg{position:fixed;inset:0;background:rgba(0,0,0,.4);display:none;z-index:20}.drawer-bg.open{display:block}
-.drawer{position:fixed;right:0;top:0;height:100%;width:min(400px,92vw);background:#fff;z-index:21;transform:translateX(100%);transition:.25s;display:flex;flex-direction:column}
-.drawer.open{transform:none}.drawer-head{padding:16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee}
-.drawer-body{padding:16px;flex:1;overflow:auto}.cart-item{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid #eee;align-items:center}
-.cart-item img{width:56px;height:56px;object-fit:cover;border-radius:10px;background:#f1e8e2}.qty{display:flex;gap:8px;align-items:center}.qty button{width:26px;height:26px;border-radius:50%;border:1px solid #ddd;background:#fff;cursor:pointer}
-.drawer-foot{padding:16px;border-top:1px solid #eee;display:flex;flex-direction:column;gap:8px}.drawer-foot input{padding:11px;border:1px solid #ddd;border-radius:10px;width:100%}
-.wa{background:#25D366;color:#fff;border:0;padding:13px;border-radius:999px;font-weight:800;cursor:pointer}
-.drawer{border-radius:20px 0 0 20px!important;box-shadow:-10px 0 30px rgba(0,0,0,.08)}
-.drawer-head{font-family:Georgia,serif!important;font-size:18px!important;font-weight:400!important;letter-spacing:.05em}
+.drawer{position:fixed;right:0;top:0;height:100%;width:min(400px,92vw);background:#fff;z-index:21;transform:translateX(100%);transition:.25s;display:flex;flex-direction:column;border-radius:20px 0 0 20px!important}
+.drawer.open{transform:none}.drawer-head{padding:16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;font-family:Georgia,serif!important;font-size:18px}
 .drawer-head button{border:1px solid #eee!important;background:#faf6f1!important;width:32px;height:32px;border-radius:50%!important;cursor:pointer}
-.wa{background:#111!important;color:#fff!important;border-radius:12px!important;padding:14px!important;font-family:Georgia,serif!important;letter-spacing:.08em!important;font-weight:400!important}
-.cart-item img{border-radius:12px!important}
-.qty button{border-radius:50%!important;border:1px solid #e8ddd5!important;background:#faf6f1!important}
-@media(max-width:760px){
-  .nav{padding:10px 12px}
-  .logo{font-size:28px}
-  .logo small{font-size:7.5px;letter-spacing:.15em}
-  .cartbtn{padding:7px 12px;font-size:13px}
-  .elegant-cart{padding:7px 12px!important;font-size:12px!important}
-  .add{padding:8px 10px!important;font-size:13px!important;font-weight:600;border-radius:10px!important;margin-top:6px}
-  .p-name{font-size:15px}
-  .p-price{font-size:14px}
-  .p-desc{font-size:11.5px}
-  .thumbs img{width:36px;height:36px}
-  .banner{padding:14px}
-  .banner b{font-size:16px}
-  .elegant-banner{padding:14px!important}
-}
+.drawer-body{padding:16px;flex:1;overflow:auto}.cart-item{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid #eee;align-items:center}
+.cart-item img{width:56px;height:56px;object-fit:cover;border-radius:12px;background:#f1e8e2}.qty{display:flex;gap:8px;align-items:center}.qty button{width:26px;height:26px;border-radius:50%;border:1px solid #e8ddd5!important;background:#faf6f1!important;cursor:pointer}
+.drawer-foot{padding:16px;border-top:1px solid #eee;display:flex;flex-direction:column;gap:8px}.drawer-foot input{padding:11px;border:1px solid #ddd;border-radius:10px;width:100%}
+.wa{background:#111!important;color:#fff!important;border:0;padding:14px!important;border-radius:12px!important;font-family:Georgia,serif!important;cursor:pointer}
+@media(max-width:760px){.nav{padding:10px 12px}.logo{font-size:28px}.logo small{font-size:7.5px}.elegant-cart{padding:7px 12px!important;font-size:12px!important}.add{padding:8px 10px!important;font-size:13px!important}.p-name{font-size:15px}.p-price{font-size:14px}.p-desc{font-size:11.5px}.thumbs img{width:36px;height:36px}}
 </style>
 </head>
 <body>
@@ -76,16 +54,49 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 <div class="topbar2">Get a FREE Cosmetic Bag for all orders above 35$ • Delivery Across Lebanon</div>
 <header class="header"><nav class="nav"><button onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})" style="font-size:24px;background:none;border:0;cursor:pointer">☰</button><a href="#" class="logo">CELEST<span style="font-style:italic">É</span><small>Cosmetics | Professional Brand</small></a><div style="display:flex;gap:16px;align-items:center"><span onclick="document.getElementById('search').focus();document.getElementById('shop').scrollIntoView({behavior:'smooth'})" style="font-size:22px;cursor:pointer">🔍</span><button class="cartbtn elegant-cart" onclick="openCart()">Bag &nbsp;·&nbsp; <span id="cart-count">0</span></button></div></nav></header>
 <main>
-<section style="max-width:1100px;margin:0 auto;position:relative;overflow:hidden;background:#fff">
-  <div id="slider" style="display:flex;transition:transform .5s ease"></div>
-  <div style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2">
-    <span class="dot" onclick="goSlide(0)" style="width:10px;height:10px;border-radius:50%;background:#fff;cursor:pointer"></span>
-    <span class="dot" onclick="goSlide(1)" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer"></span>
-    <span class="dot" onclick="goSlide(2)" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer"></span>
+
+<!-- VEO VIDEO HOMESCREEN -->
+<section style="max-width:1100px;margin:0 auto;text-align:center;padding:14px 12px 20px">
+  <div style="font-size:11px;letter-spacing:.3em;color:#b6777f;font-weight:700">CELESTÉ LIP GLOSS • LED + MIRROR</div>
+  <h2 style="font-family:Georgia,serif;font-weight:400;font-size:30px;margin:8px 0 4px;line-height:1.1">Open. Glow. Turn.<br>See the Mirror.</h2>
+  <p style="color:#888;font-size:13px;margin:0">Every gloss has LED light + mirror inside</p>
+  <div style="position:relative;max-width:420px;margin:16px auto 0;border-radius:24px;overflow:hidden;background:#faf6f1;border:1px solid #eee">
+    <video src="hero-gloss.MP4" autoplay muted loop playsinline style="width:100%;height:520px;object-fit:cover;display:block"></video>
+    <div style="position:absolute;bottom:0;left:0;right:0;padding:18px;background:linear-gradient(to top, rgba(0,0,0,.65), transparent);color:#fff;text-align:left">
+      <div style="font-family:Georgia,serif;font-size:22px">CELESTÉ Lip Gloss</div>
+      <div style="font-size:12px;letter-spacing:.15em;opacity:.9">LED ON ✨ • MIRROR INSIDE 🪞</div>
+      <button onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})" style="margin-top:10px;background:#fff;color:#111;border:0;padding:10px 18px;border-radius:999px;font-family:Georgia,serif;cursor:pointer">Shop Lip Gloss →</button>
+    </div>
   </div>
-  <button onclick="prevSlide()" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.9);border:0;width:38px;height:38px;border-radius:50%;font-size:18px;cursor:pointer;z-index:2">‹</button>
-  <button onclick="nextSlide()" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.9);border:0;width:38px;height:38px;border-radius:50%;font-size:18px;cursor:pointer;z-index:2">›</button>
 </section>
+
+<!-- 🎄 CHRISTMAS SECTION -->
+<section style="max-width:1100px;margin:0 auto;padding:10px 12px 26px;text-align:center">
+  <div style="font-size:11px;letter-spacing:.3em;color:#b6777f;font-weight:700">🎄 CHRISTMAS OFFER • LIMITED</div>
+  <h2 style="font-family:Georgia,serif;font-weight:400;font-size:32px;margin:8px 0 4px">Christmas Sets, Made To Gift</h2>
+  <p style="color:#888;font-size:13px;margin:0">Choose any shade you want • Wrapped ready for Christmas</p>
+
+  <div style="margin-top:18px;border:1px solid #e8ddd5;border-radius:24px;overflow:hidden;background:#fff;text-align:left">
+    <img src="christmas-winter-glow.WEBP" style="width:100%;display:block">
+    <div style="padding:16px"><div style="font-family:Georgia,serif;font-size:22px">Winter Glow Premium Set</div><div style="font-size:13px;color:#888;margin-top:4px">7 pieces • Mascara + Lip Gloss + Concealer + Eyeliner + Lip Matte + Highlighter + Sponge</div><div style="margin-top:8px"><span style="text-decoration:line-through;color:#aaa">65$</span> <b style="font-size:22px;color:#b6777f;margin-left:6px">50$ ONLY</b></div><button onclick="addChristmas('Winter Glow Premium Set',50)" style="margin-top:12px;width:100%;background:#111;color:#fff;border:0;padding:13px;border-radius:999px;font-family:Georgia,serif;cursor:pointer">Add Winter Glow Set - 50$ →</button></div>
+  </div>
+
+  <div style="margin-top:16px;border:1px solid #e8ddd5;border-radius:24px;overflow:hidden;background:#fff;text-align:left">
+    <img src="christmas-lip-set.WEBP" style="width:100%;display:block">
+    <div style="padding:16px"><div style="font-family:Georgia,serif;font-size:22px">Lip Set - $25 Only</div><div style="font-size:13px;color:#888;margin-top:4px">1 Lip Gloss + 2 Lip Mattes • Any Shades You Choose</div><div style="margin-top:8px"><b style="font-size:22px;color:#b6777f">25$ ONLY</b></div><button onclick="addChristmas('Lip Set - 1 Gloss + 2 Mattes',25)" style="margin-top:12px;width:100%;background:#111;color:#fff;border:0;padding:13px;border-radius:999px;font-family:Georgia,serif;cursor:pointer">Add Lip Set - 25$ →</button></div>
+  </div>
+
+  <div style="margin-top:16px;border:1px solid #e8ddd5;border-radius:24px;overflow:hidden;background:#fff;text-align:left">
+    <img src="christmas-concealer-set.WEBP" style="width:100%;display:block">
+    <div style="padding:16px"><div style="font-family:Georgia,serif;font-size:22px">Concealer / Contour Set - $20 Only</div><div style="font-size:13px;color:#888;margin-top:4px">2 Shades + Beauty Sponge</div><div style="margin-top:8px"><b style="font-size:22px;color:#b6777f">20$ ONLY</b></div><button onclick="addChristmas('Concealer / Contour Set',20)" style="margin-top:12px;width:100%;background:#111;color:#fff;border:0;padding:13px;border-radius:999px;font-family:Georgia,serif;cursor:pointer">Add Concealer Set - 20$ →</button></div>
+  </div>
+
+  <div style="margin-top:16px;border:1px solid #e8ddd5;border-radius:24px;overflow:hidden;background:#fff;text-align:left">
+    <img src="christmas-eyeliner-bundle.WEBP" style="width:100%;display:block">
+    <div style="padding:16px"><div style="font-family:Georgia,serif;font-size:22px">Eyeliner Offer Bundle</div><div style="font-size:13px;color:#888;margin-top:4px">3 Eyeliners for $15 Only + Eyeliner Stickers for Free</div><div style="margin-top:8px"><b style="font-size:22px;color:#b6777f">15$ ONLY</b></div><button onclick="addChristmas('Eyeliner Bundle - 3 Eyeliners + Stickers Free',15)" style="margin-top:12px;width:100%;background:#111;color:#fff;border:0;padding:13px;border-radius:999px;font-family:Georgia,serif;cursor:pointer">Add Eyeliner Bundle - 15$ →</button></div>
+  </div>
+</section>
+
 <section class="section" id="categories">
   <div class="banner elegant-banner"><div><b>Best Sellers</b><br><span>Blackout Babe • Bomb • Mermaid Glow • Concealer</span></div><button class="elegant-btn" onclick="filterCategory('Eyeliners')">Shop Bestsellers →</button></div>
   <div class="toolbar" id="cats"></div>
@@ -102,23 +113,6 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 <input id="cust-name" placeholder="Your name"><input id="cust-area" placeholder="Your area / city"><button class="wa" onclick="checkout()">Order on WhatsApp →</button></div></aside>
 <script src="products.js"></script>
 <script>
-let curSlide=0;
-function goSlide(n){curSlide=n;document.getElementById('slider').style.transform='translateX(-'+(n*100)+'%)';document.querySelectorAll('.dot').forEach((d,i)=>d.style.background=i===n?'#fff':'rgba(255,255,255,.5)')}
-function nextSlide(){goSlide((curSlide+1)%3)}
-function prevSlide(){goSlide((curSlide+2)%3)}
-setInterval(nextSlide,3500);
-function buildRandomSlider(){
-  let shuffled=[...PRODUCTS].sort(()=>Math.random()-0.5).slice(0,3);
-  document.getElementById('slider').innerHTML=shuffled.map(p=>`
-    <div style="min-width:100%;position:relative">
-      <img src="${p.image}" style="width:100%;height:480px;object-fit:cover;display:block">
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(to top, rgba(0,0,0,.65), transparent);color:#fff">
-        <div style="font-size:11px;letter-spacing:.25em">${p.category.toUpperCase()} • $${p.price.toFixed(2)}</div>
-        <div style="font-family:Georgia,serif;font-size:30px;margin:6px 0">${p.name}</div>
-        <button onclick="filterCategory('${p.category}')" style="background:#fff;color:#111;border:1px solid #eee;padding:10px 18px;border-radius:999px;font-family:Georgia,serif;font-size:14px;letter-spacing:.05em;cursor:pointer">Shop ${p.category} →</button>
-      </div>
-    </div>`).join('');
-}
 let cart=JSON.parse(localStorage.getItem("celeste_cart")||"[]");let activeCat="All";
 const cats=["All","Eyeliners","Lip Gloss","Lip Matte","Concealers","Mascara","Tools","Highlighters"];
 const catSelect=document.getElementById("catSelect");cats.slice(1).forEach(c=>{let o=document.createElement("option");o.value=c;o.textContent=c;catSelect.appendChild(o)});
@@ -129,7 +123,7 @@ function render(){
   let list=PRODUCTS.filter(p=>{let okCat=sel!=="All"?p.category===sel:(activeCat==="All"||p.category===activeCat);let okQ=!q||p.name.toLowerCase().includes(q)||p.description.toLowerCase().includes(q);return okCat&&okQ});
   const grid=document.getElementById("grid");grid.innerHTML="";if(!list.length){grid.innerHTML="<p>No products found.</p>";return}
   list.forEach(p=>{
-    const isBest=["blackout-babe","bomb-lipmatte","mermaid-glow","celeste-concealer"].includes(p.id);
+    const isBest=["blackout-babe","bomb-lipmatte","mermaid-gloss","celeste-concealer"].includes(p.id);
     const gallery=p.gallery&&p.gallery.length?p.gallery:[p.image];
     const div=document.createElement("div");div.className="product";
     let thumbs="";if(gallery.length>1){thumbs='<div class="thumbs">'+gallery.map((g,i)=>'<img src="'+g+'" class="'+(i===0?'active':'')+'" onclick="this.closest(\'.product\').querySelector(\'.main-img\').src=this.src; this.parentElement.querySelectorAll(\'img\').forEach(x=>x.classList.remove(\'active\')); this.classList.add(\'active\')">').join("")+'</div>'}
@@ -139,12 +133,13 @@ function render(){
   });
 }
 function addToCart(id){const p=PRODUCTS.find(x=>x.id===id);let varVal="";const sel=document.getElementById("var-"+id);if(sel)varVal=sel.value;let key=id+"|"+varVal;let ex=cart.find(x=>x.key===key);if(ex)ex.qty++;else cart.push({key,id,qty:1,variant:varVal});saveCart();openCart()}
+function addChristmas(name,price){let key="christmas|"+name;let ex=cart.find(x=>x.key===key);if(ex)ex.qty++;else cart.push({key,id:"christmas-"+name,qty:1,variant:"",name:name,price:price});saveCart();openCart()}
 function saveCart(){localStorage.setItem("celeste_cart",JSON.stringify(cart));updateCart()}
-function updateCart(){document.getElementById("cart-count").textContent=cart.reduce((a,c)=>a+c.qty,0);const box=document.getElementById("cart-items");let total=0;if(!cart.length)box.innerHTML="<p>Your bag is empty.</p>";else box.innerHTML=cart.map((it,idx)=>{const p=PRODUCTS.find(x=>x.id===it.id);total+=p.price*it.qty;return '<div class="cart-item"><img src="'+p.image+'"><div style="flex:1"><b>'+p.name+'</b><br><span style="font-size:12px;color:#888">'+(it.variant?"Shade "+it.variant+" • ":"")+'$'+p.price.toFixed(2)+'</span><div class="qty"><button onclick="changeQty('+idx+',-1)">-</button><span>'+it.qty+'</span><button onclick="changeQty('+idx+',1)">+</button></div></div><button onclick="removeItem('+idx+')" style="border:0;background:none;cursor:pointer">✕</button></div>'}).join("");document.getElementById("cart-total").textContent="$"+total.toFixed(2)}
+function updateCart(){document.getElementById("cart-count").textContent=cart.reduce((a,c)=>a+c.qty,0);const box=document.getElementById("cart-items");let total=0;if(!cart.length)box.innerHTML="<p>Your bag is empty.</p>";else box.innerHTML=cart.map((it,idx)=>{const p=PRODUCTS.find(x=>x.id===it.id);let pname=p?p.name:(it.name||it.id);let pprice=p?p.price:(it.price||0);let pimg=p?p.image:"christmas-winter-glow.WEBP";total+=pprice*it.qty;return '<div class="cart-item"><img src="'+pimg+'"><div style="flex:1"><b>'+pname+'</b><br><span style="font-size:12px;color:#888">'+(it.variant?"Shade "+it.variant+" • ":"")+'$'+pprice.toFixed(2)+'</span><div class="qty"><button onclick="changeQty('+idx+',-1)">-</button><span>'+it.qty+'</span><button onclick="changeQty('+idx+',1)">+</button></div></div><button onclick="removeItem('+idx+')" style="border:0;background:none;cursor:pointer">✕</button></div>'}).join("");document.getElementById("cart-total").textContent="$"+total.toFixed(2)}
 function changeQty(i,d){cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);saveCart()}function removeItem(i){cart.splice(i,1);saveCart()}
 function openCart(){document.getElementById("drawer").classList.add("open");document.getElementById("bg").classList.add("open");updateCart()}function closeCart(){document.getElementById("drawer").classList.remove("open");document.getElementById("bg").classList.remove("open")}
-function checkout(){let total=cart.reduce((a,c)=>a+PRODUCTS.find(x=>x.id===c.id).price*c.qty,0);let msg="Hi Celesté! I want to order:%0A%0A"+cart.map(c=>{const p=PRODUCTS.find(x=>x.id===c.id);return "- "+p.name+(c.variant?" - Shade "+c.variant:"")+" x"+c.qty+" - $"+(p.price*c.qty).toFixed(2)}).join("%0A")+"%0A%0ATotal: $"+total.toFixed(2)+"%0AName: "+encodeURIComponent(document.getElementById("cust-name").value)+"%0AArea: "+encodeURIComponent(document.getElementById("cust-area").value);window.open("https://wa.me/96170005510?text="+msg,"_blank")}
-render();updateCart();buildRandomSlider();
+function checkout(){let total=cart.reduce((a,c)=>{const p=PRODUCTS.find(x=>x.id===c.id);return a+(p?p.price:(c.price||0))*c.qty},0);let msg="Hi Celesté! I want to order:%0A%0A"+cart.map(c=>{const p=PRODUCTS.find(x=>x.id===c.id);let n=p?p.name:(c.name||c.id);let pr=p?p.price:(c.price||0);return "- "+n+(c.variant?" - Shade "+c.variant:"")+" x"+c.qty+" - $"+(pr*c.qty).toFixed(2)}).join("%0A")+"%0A%0ATotal: $"+total.toFixed(2)+"%0AName: "+encodeURIComponent(document.getElementById("cust-name").value)+"%0AArea: "+encodeURIComponent(document.getElementById("cust-area").value);window.open("https://wa.me/96170005510?text="+msg,"_blank")}
+render();updateCart();
 </script>
 </body>
 </html>
