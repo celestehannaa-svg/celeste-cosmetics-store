@@ -46,6 +46,9 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 .cart-item img{width:56px;height:56px;object-fit:cover;border-radius:12px;background:#f1e8e2}.qty{display:flex;gap:8px;align-items:center}.qty button{width:26px;height:26px;border-radius:50%;border:1px solid #e8ddd5!important;background:#faf6f1!important;cursor:pointer}
 .drawer-foot{padding:16px;border-top:1px solid #eee;display:flex;flex-direction:column;gap:8px}.drawer-foot input{padding:11px;border:1px solid #ddd;border-radius:10px;width:100%}
 .wa{background:#111!important;color:#fff!important;border:0;padding:14px!important;border-radius:12px!important;font-family:Georgia,serif!important;cursor:pointer}
+.xmas-select{width:100%;padding:11px;border:1px solid #ddd;border-radius:10px;background:#fff;margin-top:6px}
+.xmas-label{font-size:12px;font-weight:700;margin-top:10px;display:block}
+.wa-small{background:#fff!important;color:#111!important;border:1px solid #ddd!important;padding:10px!important;border-radius:999px!important;width:100%;margin-top:8px;cursor:pointer;font-size:13px}
 @media(max-width:760px){.nav{padding:10px 12px}.logo{font-size:28px}.logo small{font-size:7.5px}.elegant-cart{padding:7px 12px!important;font-size:12px!important}.add{padding:8px 10px!important;font-size:13px!important}.p-name{font-size:15px}.p-price{font-size:14px}.p-desc{font-size:11.5px}.thumbs img{width:36px;height:36px}}
 </style>
 </head>
@@ -55,13 +58,15 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 <header class="header"><nav class="nav"><button onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})" style="font-size:24px;background:none;border:0;cursor:pointer">☰</button><a href="#" class="logo">CELEST<span style="font-style:italic">É</span><small>Cosmetics | Professional Brand</small></a><div style="display:flex;gap:16px;align-items:center"><span onclick="document.getElementById('search').focus();document.getElementById('shop').scrollIntoView({behavior:'smooth'})" style="font-size:22px;cursor:pointer">🔍</span><button class="cartbtn elegant-cart" onclick="openCart()">Bag &nbsp;·&nbsp; <span id="cart-count">0</span></button></div></nav></header>
 <main>
 
-<!-- VEO VIDEO HOMESCREEN -->
+<!-- VEO VIDEO HOMESCREEN - FIXED PATH images/ -->
 <section style="max-width:1100px;margin:0 auto;text-align:center;padding:14px 12px 20px">
   <div style="font-size:11px;letter-spacing:.3em;color:#b6777f;font-weight:700">CELESTÉ LIP GLOSS • LED + MIRROR</div>
   <h2 style="font-family:Georgia,serif;font-weight:400;font-size:30px;margin:8px 0 4px;line-height:1.1">Open. Glow. Turn.<br>See the Mirror.</h2>
   <p style="color:#888;font-size:13px;margin:0">Every gloss has LED light + mirror inside</p>
   <div style="position:relative;max-width:420px;margin:16px auto 0;border-radius:24px;overflow:hidden;background:#faf6f1;border:1px solid #eee">
-    <video src="hero-gloss.MP4" autoplay muted loop playsinline style="width:100%;height:520px;object-fit:cover;display:block"></video>
+    <video id="heroVideo" autoplay muted loop playsinline style="width:100%;height:520px;object-fit:cover;display:block;background:#faf6f1">
+      <source src="images/hero-gloss.MP4" type="video/mp4">
+    </video>
     <div style="position:absolute;bottom:0;left:0;right:0;padding:18px;background:linear-gradient(to top, rgba(0,0,0,.65), transparent);color:#fff;text-align:left">
       <div style="font-family:Georgia,serif;font-size:22px">CELESTÉ Lip Gloss</div>
       <div style="font-size:12px;letter-spacing:.15em;opacity:.9">LED ON ✨ • MIRROR INSIDE 🪞</div>
@@ -70,30 +75,70 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
   </div>
 </section>
 
-<!-- 🎄 CHRISTMAS SECTION -->
+<!-- 🎄 CHRISTMAS SECTION WITH SHADE CHOOSER - FIXED PATH images/ -->
 <section style="max-width:1100px;margin:0 auto;padding:10px 12px 26px;text-align:center">
   <div style="font-size:11px;letter-spacing:.3em;color:#b6777f;font-weight:700">🎄 CHRISTMAS OFFER • LIMITED</div>
   <h2 style="font-family:Georgia,serif;font-weight:400;font-size:32px;margin:8px 0 4px">Christmas Sets, Made To Gift</h2>
-  <p style="color:#888;font-size:13px;margin:0">Choose any shade you want • Wrapped ready for Christmas</p>
+  <p style="color:#888;font-size:13px;margin:0">Choose your shades below • Or ask us on WhatsApp for shade details</p>
 
+  <!-- WINTER GLOW -->
   <div style="margin-top:18px;border:1px solid #e8ddd5;border-radius:24px;overflow:hidden;background:#fff;text-align:left">
-    <img src="christmas-winter-glow.WEBP" style="width:100%;display:block">
-    <div style="padding:16px"><div style="font-family:Georgia,serif;font-size:22px">Winter Glow Premium Set</div><div style="font-size:13px;color:#888;margin-top:4px">7 pieces • Mascara + Lip Gloss + Concealer + Eyeliner + Lip Matte + Highlighter + Sponge</div><div style="margin-top:8px"><span style="text-decoration:line-through;color:#aaa">65$</span> <b style="font-size:22px;color:#b6777f;margin-left:6px">50$ ONLY</b></div><button onclick="addChristmas('Winter Glow Premium Set',50)" style="margin-top:12px;width:100%;background:#111;color:#fff;border:0;padding:13px;border-radius:999px;font-family:Georgia,serif;cursor:pointer">Add Winter Glow Set - 50$ →</button></div>
+    <img src="images/christmas-winter-glow.WEBP" style="width:100%;display:block">
+    <div style="padding:16px">
+      <div style="font-family:Georgia,serif;font-size:22px">Winter Glow Premium Set</div>
+      <div style="font-size:13px;color:#888;margin-top:4px">7 pieces • Mascara + Lip Gloss + Concealer + Eyeliner + Lip Matte + Highlighter + Sponge</div>
+      <div style="margin-top:8px"><span style="text-decoration:line-through;color:#aaa">65$</span> <b style="font-size:22px;color:#b6777f;margin-left:6px">50$ ONLY</b></div>
+      <span class="xmas-label">Choose Lip Gloss shade:</span><select id="wg-gloss" class="xmas-select"></select>
+      <span class="xmas-label">Choose Lip Matte shade:</span><select id="wg-matte" class="xmas-select"></select>
+      <span class="xmas-label">Choose Concealer shade:</span><select id="wg-conc" class="xmas-select"></select>
+      <span class="xmas-label">Choose Eyeliner:</span><select id="wg-eye" class="xmas-select"></select>
+      <button onclick="addChristmasWithShades('Winter Glow Premium Set',50,['wg-gloss','wg-matte','wg-conc','wg-eye'])" style="margin-top:14px;width:100%;background:#111;color:#fff;border:0;padding:13px;border-radius:999px;font-family:Georgia,serif;cursor:pointer">Add Winter Glow Set - 50$ →</button>
+      <button class="wa-small" onclick="askShades('Winter Glow Premium Set')">💬 Don't know shades? Ask for shade details on WhatsApp</button>
+    </div>
   </div>
 
+  <!-- LIP SET -->
   <div style="margin-top:16px;border:1px solid #e8ddd5;border-radius:24px;overflow:hidden;background:#fff;text-align:left">
-    <img src="christmas-lip-set.WEBP" style="width:100%;display:block">
-    <div style="padding:16px"><div style="font-family:Georgia,serif;font-size:22px">Lip Set - $25 Only</div><div style="font-size:13px;color:#888;margin-top:4px">1 Lip Gloss + 2 Lip Mattes • Any Shades You Choose</div><div style="margin-top:8px"><b style="font-size:22px;color:#b6777f">25$ ONLY</b></div><button onclick="addChristmas('Lip Set - 1 Gloss + 2 Mattes',25)" style="margin-top:12px;width:100%;background:#111;color:#fff;border:0;padding:13px;border-radius:999px;font-family:Georgia,serif;cursor:pointer">Add Lip Set - 25$ →</button></div>
+    <img src="images/christmas-lip-set.WEBP" style="width:100%;display:block">
+    <div style="padding:16px">
+      <div style="font-family:Georgia,serif;font-size:22px">Lip Set - $25 Only</div>
+      <div style="font-size:13px;color:#888;margin-top:4px">1 Lip Gloss + 2 Lip Mattes • Any Shades You Choose</div>
+      <div style="margin-top:8px"><b style="font-size:22px;color:#b6777f">25$ ONLY</b></div>
+      <span class="xmas-label">1 - Lip Gloss shade:</span><select id="lip-gloss" class="xmas-select"></select>
+      <span class="xmas-label">2 - Lip Matte shade 1:</span><select id="lip-matte1" class="xmas-select"></select>
+      <span class="xmas-label">3 - Lip Matte shade 2:</span><select id="lip-matte2" class="xmas-select"></select>
+      <button onclick="addChristmasWithShades('Lip Set - 1 Gloss + 2 Mattes',25,['lip-gloss','lip-matte1','lip-matte2'])" style="margin-top:14px;width:100%;background:#111;color:#fff;border:0;padding:13px;border-radius:999px;font-family:Georgia,serif;cursor:pointer">Add Lip Set - 25$ →</button>
+      <button class="wa-small" onclick="askShades('Lip Set')">💬 Don't know shades? Ask for shade details on WhatsApp</button>
+    </div>
   </div>
 
+  <!-- CONCEALER SET -->
   <div style="margin-top:16px;border:1px solid #e8ddd5;border-radius:24px;overflow:hidden;background:#fff;text-align:left">
-    <img src="christmas-concealer-set.WEBP" style="width:100%;display:block">
-    <div style="padding:16px"><div style="font-family:Georgia,serif;font-size:22px">Concealer / Contour Set - $20 Only</div><div style="font-size:13px;color:#888;margin-top:4px">2 Shades + Beauty Sponge</div><div style="margin-top:8px"><b style="font-size:22px;color:#b6777f">20$ ONLY</b></div><button onclick="addChristmas('Concealer / Contour Set',20)" style="margin-top:12px;width:100%;background:#111;color:#fff;border:0;padding:13px;border-radius:999px;font-family:Georgia,serif;cursor:pointer">Add Concealer Set - 20$ →</button></div>
+    <img src="images/christmas-concealer-set.WEBP" style="width:100%;display:block">
+    <div style="padding:16px">
+      <div style="font-family:Georgia,serif;font-size:22px">Concealer / Contour Set - $20 Only</div>
+      <div style="font-size:13px;color:#888;margin-top:4px">2 Shades + Beauty Sponge</div>
+      <div style="margin-top:8px"><b style="font-size:22px;color:#b6777f">20$ ONLY</b></div>
+      <span class="xmas-label">Concealer shade 1:</span><select id="conc1" class="xmas-select"></select>
+      <span class="xmas-label">Concealer shade 2:</span><select id="conc2" class="xmas-select"></select>
+      <button onclick="addChristmasWithShades('Concealer / Contour Set',20,['conc1','conc2'])" style="margin-top:14px;width:100%;background:#111;color:#fff;border:0;padding:13px;border-radius:999px;font-family:Georgia,serif;cursor:pointer">Add Concealer Set - 20$ →</button>
+      <button class="wa-small" onclick="askShades('Concealer / Contour Set')">💬 Don't know shades? Ask for shade details on WhatsApp</button>
+    </div>
   </div>
 
+  <!-- EYELINER BUNDLE -->
   <div style="margin-top:16px;border:1px solid #e8ddd5;border-radius:24px;overflow:hidden;background:#fff;text-align:left">
-    <img src="christmas-eyeliner-bundle.WEBP" style="width:100%;display:block">
-    <div style="padding:16px"><div style="font-family:Georgia,serif;font-size:22px">Eyeliner Offer Bundle</div><div style="font-size:13px;color:#888;margin-top:4px">3 Eyeliners for $15 Only + Eyeliner Stickers for Free</div><div style="margin-top:8px"><b style="font-size:22px;color:#b6777f">15$ ONLY</b></div><button onclick="addChristmas('Eyeliner Bundle - 3 Eyeliners + Stickers Free',15)" style="margin-top:12px;width:100%;background:#111;color:#fff;border:0;padding:13px;border-radius:999px;font-family:Georgia,serif;cursor:pointer">Add Eyeliner Bundle - 15$ →</button></div>
+    <img src="images/christmas-eyeliner-bundle.WEBP" style="width:100%;display:block">
+    <div style="padding:16px">
+      <div style="font-family:Georgia,serif;font-size:22px">Eyeliner Offer Bundle</div>
+      <div style="font-size:13px;color:#888;margin-top:4px">3 Eyeliners for $15 Only + Eyeliner Stickers for Free</div>
+      <div style="margin-top:8px"><b style="font-size:22px;color:#b6777f">15$ ONLY</b></div>
+      <span class="xmas-label">Eyeliner 1:</span><select id="eye1" class="xmas-select"></select>
+      <span class="xmas-label">Eyeliner 2:</span><select id="eye2" class="xmas-select"></select>
+      <span class="xmas-label">Eyeliner 3:</span><select id="eye3" class="xmas-select"></select>
+      <button onclick="addChristmasWithShades('Eyeliner Bundle - 3 Eyeliners + Stickers Free',15,['eye1','eye2','eye3'])" style="margin-top:14px;width:100%;background:#111;color:#fff;border:0;padding:13px;border-radius:999px;font-family:Georgia,serif;cursor:pointer">Add Eyeliner Bundle - 15$ →</button>
+      <button class="wa-small" onclick="askShades('Eyeliner Bundle')">💬 Don't know shades? Ask for shade details on WhatsApp</button>
+    </div>
   </div>
 </section>
 
@@ -109,8 +154,8 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 <aside class="drawer" id="drawer"><div class="drawer-head"><b>Your Bag</b><button onclick="closeCart()">✕</button></div><div class="drawer-body" id="cart-items"></div>
 <div class="drawer-foot">
 <div style="display:flex;justify-content:space-between"><span>Total</span><b id="cart-total">$0.00</b></div>
-<div style="font-size:12px;color:#888">Delivery calculated on WhatsApp • FREE Cosmetic Bag for orders above 35$</div>
-<input id="cust-name" placeholder="Your name"><input id="cust-area" placeholder="Your area / city"><button class="wa" onclick="checkout()">Order on WhatsApp →</button></div></aside>
+<div style="font-size:12px;color:#888">Delivery calculated on 【entity-WhatsApp¦canonical_name=WhatsApp】 • FREE Cosmetic Bag for orders above 35$</div>
+<input id="cust-name" placeholder="Your name"><input id="cust-area" placeholder="Your area / city"><button class="wa" onclick="checkout()">Order on 【entity-WhatsApp¦canonical_name=WhatsApp】 →</button></div></aside>
 <script src="products.js"></script>
 <script>
 let cart=JSON.parse(localStorage.getItem("celeste_cart")||"[]");let activeCat="All";
@@ -132,14 +177,51 @@ function render(){
     grid.appendChild(div);
   });
 }
+// --- CHRISTMAS SHADE CHOOSER - HUGE LIST FROM YOUR PRODUCTS ---
+function fillXmasSelects(){
+  let gloss = PRODUCTS.filter(p=>p.category==="Lip Gloss").map(p=>p.name);
+  let matte = PRODUCTS.filter(p=>p.category==="Lip Matte").map(p=>p.name);
+  let conc = PRODUCTS.filter(p=>p.category==="Concealers").map(p=>p.name);
+  let eye = PRODUCTS.filter(p=>p.category==="Eyeliners").map(p=>p.name);
+  if(!gloss.length) gloss = ["Magic","Georgia Peach","Skin","Deep","BombShell","Mermaid Glow","Crystal Diamond","Ginger","Lavender","Ice"];
+  if(!matte.length) matte = ["Adele","Bomb","Blackout Babe","Blush Crush","Drama Queen","Crush"];
+  if(!conc.length) conc = ["Concealer Light","Concealer Medium","Concealer Dark"];
+  if(!eye.length) eye = ["Black Eyeliner","Blue Eyeliner","Brown Eyeliner","Blackout Babe Eyeliner"];
+  PRODUCTS.forEach(p=>{ if(p.variants){ p.variants.forEach(v=>{ if(p.category==="Lip Gloss" && !gloss.includes(v)) gloss.push(v); if(p.category==="Lip Matte" && !matte.includes(v)) matte.push(v); }) } });
+  function fill(id, list, label){ let s=document.getElementById(id); if(!s) return; s.innerHTML='<option value="">'+label+'</option>'+list.map(n=>'<option>'+n+'</option>').join('')+'<option>Surprise me - Choose best for me</option><option>I will tell you on WhatsApp</option>'; }
+  fill("wg-gloss", gloss, "Choose Lip Gloss shade...");
+  fill("wg-matte", matte, "Choose Lip Matte shade...");
+  fill("wg-conc", conc, "Choose Concealer shade...");
+  fill("wg-eye", eye, "Choose Eyeliner...");
+  fill("lip-gloss", gloss, "Choose Lip Gloss shade...");
+  fill("lip-matte1", matte, "Choose Lip Matte 1...");
+  fill("lip-matte2", matte, "Choose Lip Matte 2...");
+  fill("conc1", conc, "Choose Concealer 1...");
+  fill("conc2", conc, "Choose Concealer 2...");
+  fill("eye1", eye, "Choose Eyeliner 1...");
+  fill("eye2", eye, "Choose Eyeliner 2...");
+  fill("eye3", eye, "Choose Eyeliner 3...");
+}
+function askShades(setName){
+  let msg = "Hi Celesté! 🎄 I want the "+encodeURIComponent(setName)+" but I need shade details please. Can you send me all shades photos?";
+  window.open("https://wa.me/96170005510?text="+msg,"_blank");
+}
+function addChristmasWithShades(name, price, ids){
+  let shades = ids.map(id=>{ let el=document.getElementById(id); return (el && el.value) ? el.value : "Not chosen"; });
+  let fullName = name + " | Shades: " + shades.join(", ");
+  let key = "christmas|"+fullName;
+  let ex = cart.find(x=>x.key===key);
+  if(ex) ex.qty++; else cart.push({key,id:"christmas-"+name,qty:1,variant:"",name:fullName,price:price, image:"images/christmas-winter-glow.WEBP"});
+  saveCart(); openCart();
+}
+function addChristmas(name,price){ addChristmasWithShades(name,price,[]); }
 function addToCart(id){const p=PRODUCTS.find(x=>x.id===id);let varVal="";const sel=document.getElementById("var-"+id);if(sel)varVal=sel.value;let key=id+"|"+varVal;let ex=cart.find(x=>x.key===key);if(ex)ex.qty++;else cart.push({key,id,qty:1,variant:varVal});saveCart();openCart()}
-function addChristmas(name,price){let key="christmas|"+name;let ex=cart.find(x=>x.key===key);if(ex)ex.qty++;else cart.push({key,id:"christmas-"+name,qty:1,variant:"",name:name,price:price});saveCart();openCart()}
 function saveCart(){localStorage.setItem("celeste_cart",JSON.stringify(cart));updateCart()}
-function updateCart(){document.getElementById("cart-count").textContent=cart.reduce((a,c)=>a+c.qty,0);const box=document.getElementById("cart-items");let total=0;if(!cart.length)box.innerHTML="<p>Your bag is empty.</p>";else box.innerHTML=cart.map((it,idx)=>{const p=PRODUCTS.find(x=>x.id===it.id);let pname=p?p.name:(it.name||it.id);let pprice=p?p.price:(it.price||0);let pimg=p?p.image:"christmas-winter-glow.WEBP";total+=pprice*it.qty;return '<div class="cart-item"><img src="'+pimg+'"><div style="flex:1"><b>'+pname+'</b><br><span style="font-size:12px;color:#888">'+(it.variant?"Shade "+it.variant+" • ":"")+'$'+pprice.toFixed(2)+'</span><div class="qty"><button onclick="changeQty('+idx+',-1)">-</button><span>'+it.qty+'</span><button onclick="changeQty('+idx+',1)">+</button></div></div><button onclick="removeItem('+idx+')" style="border:0;background:none;cursor:pointer">✕</button></div>'}).join("");document.getElementById("cart-total").textContent="$"+total.toFixed(2)}
+function updateCart(){document.getElementById("cart-count").textContent=cart.reduce((a,c)=>a+c.qty,0);const box=document.getElementById("cart-items");let total=0;if(!cart.length)box.innerHTML="<p>Your bag is empty.</p>";else box.innerHTML=cart.map((it,idx)=>{const p=PRODUCTS.find(x=>x.id===it.id);let pname=p?p.name:(it.name||it.id);let pprice=p?p.price:(it.price||0);let pimg=(it.image||(p?p.image:"images/christmas-winter-glow.WEBP"));total+=pprice*it.qty;return '<div class="cart-item"><img src="'+pimg+'"><div style="flex:1"><b>'+pname+'</b><br><span style="font-size:12px;color:#888">'+(it.variant?"Shade "+it.variant+" • ":"")+'$'+pprice.toFixed(2)+'</span><div class="qty"><button onclick="changeQty('+idx+',-1)">-</button><span>'+it.qty+'</span><button onclick="changeQty('+idx+',1)">+</button></div></div><button onclick="removeItem('+idx+')" style="border:0;background:none;cursor:pointer">✕</button></div>'}).join("");document.getElementById("cart-total").textContent="$"+total.toFixed(2)}
 function changeQty(i,d){cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);saveCart()}function removeItem(i){cart.splice(i,1);saveCart()}
 function openCart(){document.getElementById("drawer").classList.add("open");document.getElementById("bg").classList.add("open");updateCart()}function closeCart(){document.getElementById("drawer").classList.remove("open");document.getElementById("bg").classList.remove("open")}
 function checkout(){let total=cart.reduce((a,c)=>{const p=PRODUCTS.find(x=>x.id===c.id);return a+(p?p.price:(c.price||0))*c.qty},0);let msg="Hi Celesté! I want to order:%0A%0A"+cart.map(c=>{const p=PRODUCTS.find(x=>x.id===c.id);let n=p?p.name:(c.name||c.id);let pr=p?p.price:(c.price||0);return "- "+n+(c.variant?" - Shade "+c.variant:"")+" x"+c.qty+" - $"+(pr*c.qty).toFixed(2)}).join("%0A")+"%0A%0ATotal: $"+total.toFixed(2)+"%0AName: "+encodeURIComponent(document.getElementById("cust-name").value)+"%0AArea: "+encodeURIComponent(document.getElementById("cust-area").value);window.open("https://wa.me/96170005510?text="+msg,"_blank")}
-render();updateCart();
+render(); fillXmasSelects(); updateCart();
 </script>
 </body>
 </html>
