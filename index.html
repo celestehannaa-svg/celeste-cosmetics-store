@@ -49,7 +49,15 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 .xmas-select{width:100%;padding:11px;border:1px solid #ddd;border-radius:10px;background:#fff;margin-top:6px}
 .xmas-label{font-size:12px;font-weight:700;margin-top:10px;display:block}
 .wa-small{background:#fff!important;color:#111!important;border:1px solid #ddd!important;padding:10px!important;border-radius:999px!important;width:100%;margin-top:8px;cursor:pointer;font-size:13px}
-@media(max-width:760px){.nav{padding:10px 12px}.logo{font-size:28px}.logo small{font-size:7.5px}.elegant-cart{padding:7px 12px!important;font-size:12px!important}.add{padding:8px 10px!important;font-size:13px!important}.p-name{font-size:15px}.p-price{font-size:14px}.p-desc{font-size:11.5px}.thumbs img{width:36px;height:36px}}
+/* BLENDED HERO - NO BOX, NO EDGES */
+.hero-blend{margin:0;padding:0;background:#fff}
+.hero-blend video{width:100%;height:auto;max-height:620px;object-fit:cover;display:block;border:0;border-radius:0;outline:none;
+  -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 8%, black 82%, transparent 100%);
+  mask-image:linear-gradient(to bottom, transparent 0%, black 8%, black 82%, transparent 100%);
+}
+.hero-text{max-width:1100px;margin:0 auto;text-align:center;padding:14px 16px 0}
+.hero-caption{position:relative;max-width:420px;margin:-70px auto 0;z-index:2;text-align:center;padding:0 16px}
+@media(max-width:760px){.hero-blend video{max-height:520px}.hero-caption{margin-top:-60px}}
 </style>
 </head>
 <body>
@@ -58,30 +66,29 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 <header class="header"><nav class="nav"><button onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})" style="font-size:24px;background:none;border:0;cursor:pointer">☰</button><a href="#" class="logo">CELEST<span style="font-style:italic">É</span><small>Cosmetics | Professional Brand</small></a><div style="display:flex;gap:16px;align-items:center"><span onclick="document.getElementById('search').focus();document.getElementById('shop').scrollIntoView({behavior:'smooth'})" style="font-size:22px;cursor:pointer">🔍</span><button class="cartbtn elegant-cart" onclick="openCart()">Bag &nbsp;·&nbsp; <span id="cart-count">0</span></button></div></nav></header>
 <main>
 
-<!-- VEO VIDEO HOMESCREEN - FIXED PATH images/ -->
-<section style="max-width:1100px;margin:0 auto;text-align:center;padding:14px 12px 20px">
-  <div style="font-size:11px;letter-spacing:.3em;color:#b6777f;font-weight:700">CELESTÉ LIP GLOSS • LED + MIRROR</div>
-  <h2 style="font-family:Georgia,serif;font-weight:400;font-size:30px;margin:8px 0 4px;line-height:1.1">Open. Glow. Turn.<br>See the Mirror.</h2>
-  <p style="color:#888;font-size:13px;margin:0">Every gloss has LED light + mirror inside</p>
-  <div style="position:relative;max-width:420px;margin:16px auto 0;border-radius:24px;overflow:hidden;background:#faf6f1;border:1px solid #eee">
-    <video id="heroVideo" autoplay muted loop playsinline style="width:100%;height:520px;object-fit:cover;display:block;background:#faf6f1">
-      <source src="images/hero-gloss.MP4" type="video/mp4">
-    </video>
-    <div style="position:absolute;bottom:0;left:0;right:0;padding:18px;background:linear-gradient(to top, rgba(0,0,0,.65), transparent);color:#fff;text-align:left">
-      <div style="font-family:Georgia,serif;font-size:22px">CELESTÉ Lip Gloss</div>
-      <div style="font-size:12px;letter-spacing:.15em;opacity:.9">LED ON ✨ • MIRROR INSIDE 🪞</div>
-      <button onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})" style="margin-top:10px;background:#fff;color:#111;border:0;padding:10px 18px;border-radius:999px;font-family:Georgia,serif;cursor:pointer">Shop Lip Gloss →</button>
-    </div>
+<!-- BLENDED VIDEO HOMESCREEN - NO EDGES -->
+<section class="hero-blend">
+  <div class="hero-text">
+    <div style="font-size:11px;letter-spacing:.3em;color:#b6777f;font-weight:700">CELESTÉ LIP GLOSS • LED + MIRROR</div>
+    <h2 style="font-family:Georgia,serif;font-weight:400;font-size:30px;margin:8px 0 4px;line-height:1.1">Open. Glow. Turn.<br>See the Mirror.</h2>
+    <p style="color:#888;font-size:13px;margin:0 0 10px">Every gloss has LED light + mirror inside</p>
+  </div>
+  <video autoplay muted loop playsinline>
+    <source src="images/hero-gloss.MP4" type="video/mp4">
+  </video>
+  <div class="hero-caption">
+    <div style="font-family:Georgia,serif;font-size:22px">CELESTÉ Lip Gloss</div>
+    <div style="font-size:12px;letter-spacing:.15em;color:#888">LED ON ✨ • MIRROR INSIDE 🪞</div>
+    <button onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})" style="margin-top:10px;background:#111;color:#fff;border:0;padding:11px 22px;border-radius:999px;font-family:Georgia,serif;cursor:pointer">Shop Lip Gloss →</button>
   </div>
 </section>
 
-<!-- 🎄 CHRISTMAS SECTION WITH SHADE CHOOSER - FIXED PATH images/ -->
-<section style="max-width:1100px;margin:0 auto;padding:10px 12px 26px;text-align:center">
+<!-- 🎄 CHRISTMAS SECTION WITH SHADE CHOOSER -->
+<section style="max-width:1100px;margin:0 auto;padding:24px 12px 26px;text-align:center">
   <div style="font-size:11px;letter-spacing:.3em;color:#b6777f;font-weight:700">🎄 CHRISTMAS OFFER • LIMITED</div>
   <h2 style="font-family:Georgia,serif;font-weight:400;font-size:32px;margin:8px 0 4px">Christmas Sets, Made To Gift</h2>
   <p style="color:#888;font-size:13px;margin:0">Choose your shades below • Or ask us on WhatsApp for shade details</p>
 
-  <!-- WINTER GLOW -->
   <div style="margin-top:18px;border:1px solid #e8ddd5;border-radius:24px;overflow:hidden;background:#fff;text-align:left">
     <img src="images/christmas-winter-glow.WEBP" style="width:100%;display:block">
     <div style="padding:16px">
@@ -97,7 +104,6 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
     </div>
   </div>
 
-  <!-- LIP SET -->
   <div style="margin-top:16px;border:1px solid #e8ddd5;border-radius:24px;overflow:hidden;background:#fff;text-align:left">
     <img src="images/christmas-lip-set.WEBP" style="width:100%;display:block">
     <div style="padding:16px">
@@ -112,7 +118,6 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
     </div>
   </div>
 
-  <!-- CONCEALER SET -->
   <div style="margin-top:16px;border:1px solid #e8ddd5;border-radius:24px;overflow:hidden;background:#fff;text-align:left">
     <img src="images/christmas-concealer-set.WEBP" style="width:100%;display:block">
     <div style="padding:16px">
@@ -126,7 +131,6 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
     </div>
   </div>
 
-  <!-- EYELINER BUNDLE -->
   <div style="margin-top:16px;border:1px solid #e8ddd5;border-radius:24px;overflow:hidden;background:#fff;text-align:left">
     <img src="images/christmas-eyeliner-bundle.WEBP" style="width:100%;display:block">
     <div style="padding:16px">
@@ -154,8 +158,8 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 <aside class="drawer" id="drawer"><div class="drawer-head"><b>Your Bag</b><button onclick="closeCart()">✕</button></div><div class="drawer-body" id="cart-items"></div>
 <div class="drawer-foot">
 <div style="display:flex;justify-content:space-between"><span>Total</span><b id="cart-total">$0.00</b></div>
-<div style="font-size:12px;color:#888">Delivery calculated on 【entity-WhatsApp¦canonical_name=WhatsApp】 • FREE Cosmetic Bag for orders above 35$</div>
-<input id="cust-name" placeholder="Your name"><input id="cust-area" placeholder="Your area / city"><button class="wa" onclick="checkout()">Order on 【entity-WhatsApp¦canonical_name=WhatsApp】 →</button></div></aside>
+<div style="font-size:12px;color:#888">Delivery calculated on WhatsApp • FREE Cosmetic Bag for orders above 35$</div>
+<input id="cust-name" placeholder="Your name"><input id="cust-area" placeholder="Your area / city"><button class="wa" onclick="checkout()">Order on WhatsApp →</button></div></aside>
 <script src="products.js"></script>
 <script>
 let cart=JSON.parse(localStorage.getItem("celeste_cart")||"[]");let activeCat="All";
@@ -177,7 +181,6 @@ function render(){
     grid.appendChild(div);
   });
 }
-// --- CHRISTMAS SHADE CHOOSER - HUGE LIST FROM YOUR PRODUCTS ---
 function fillXmasSelects(){
   let gloss = PRODUCTS.filter(p=>p.category==="Lip Gloss").map(p=>p.name);
   let matte = PRODUCTS.filter(p=>p.category==="Lip Matte").map(p=>p.name);
